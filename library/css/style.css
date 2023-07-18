@@ -391,7 +391,44 @@ textarea {
     box-sizing: inherit;
   }
 
+  body {
+    font-family: 'Forum';
+    font-style: normal;
+  }
+
+  .header {    
+    gap: 30px;
+    color: #FFFFFF;
+  }
+
   .wrapper {
+    display: flex;
+    align-items: space-between;
     max-width:  1440px;
+    height: 90px;
     margin: 0 auto;
+    background-color: #0C0C0E;
+  }
+
+  .header__wrapper {
+    display: flex;
+    align-items: space-between;
+    flex-grow: 1;
+  }
+
+  .title {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .navigation {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 30px;
+    color: #FFFFFF;
+  }
+
+  .header__button {
+    align-items: flex-end;
   }
