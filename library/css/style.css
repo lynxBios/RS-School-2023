@@ -394,6 +394,7 @@ textarea {
   body {
     font-family: 'Forum';
     font-style: normal;
+    
   }
 
   .header {    
@@ -407,13 +408,14 @@ textarea {
     max-width:  1440px;
     height: 90px;
     margin: 0 auto;
-    background-color: #0C0C0E;
+    background-color: #FFF;
   }
 
   .header__wrapper {
     display: flex;
     align-items: space-between;
     flex-grow: 1;
+    background-color: #0C0C0E;
   }
 
   .title {
