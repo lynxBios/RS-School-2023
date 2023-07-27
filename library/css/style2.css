@@ -2,3 +2,29 @@
   display: flex;
   
 }
+.overlay {
+  position: absolute;
+  left: 100; right: 100; top: 100; bottom: 100;
+  background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.10) 100%);
+  
+}
+
+.welcome__text {
+  width: 520px;
+  position: absolute;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 220px;
+  padding: 35px 40px;
+}
