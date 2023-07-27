@@ -167,7 +167,6 @@ h6 {
 
 .welcome__bg {
   display: flex;
-  position: relative;
   width: 1440px;
   height: 600;
 }
@@ -183,7 +182,11 @@ h6 {
 
 .welcome__text {
   width: 520px;
+  position: absolute;
+  display: flex;
   flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   text-align: center;
   font-family: Forum;
@@ -193,7 +196,78 @@ h6 {
   line-height: 50px; /* 125% */
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin-top: 100px;
+  margin-top: 220px;
+  padding: 35px 40px;
+  left: 100; right: 100; top: 100; bottom: 100;
+}
+
+.section-title {
+  color: #0C0C0E;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 100% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  width: 50px;
+  height: 1px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  background: #0C0C0E;
+  margin-top: 20px;
+  margin-left: 695px;
+  margin-bottom: 40px;
+}
+
+.about__text {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+}
+
+.layout-3-column {
+  margin-left: 20px;
+  margin-right: 20px;
+  gap: 25px;
+}
+
+.images-items {
+  display: flex;  
+  justify-content: space-between;
+}
+
+.carousel__pagination {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  display: flex;  
+  justify-content: center;
+  gap: 10px;
+}
+
+.area__circle__buttons {
+  width: 26px;
+  height: 26px;
+  display: flex; 
+  
+}
+
+.about__button {
+  cursor: pointer;
+  transition: 0.5s;
+  border-color: #fff;
+  background: #fff;
+  border-radius: 50%;
 }
 
 
@@ -201,7 +275,14 @@ h6 {
 
 
 
-.season-button {
+
+
+
+
+
+
+
+.season-button {  /* это надо обернуть*/
     accent-color: black;
   }
 

@@ -1,4 +1,34 @@
 .header__navigation {
   display: flex;
   
+
+
+
+
+
+.carousel__pagination {
+  background: lightcyan;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.area__circle__buttons {
+  /*position: relative;*/
+  width: 36px;
+  height: 36px;
+}
+
+.about__button {
+  /*position: absolute;*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  
+  
 }
