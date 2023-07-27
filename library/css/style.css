@@ -219,9 +219,11 @@ h6 {
   height: 1px;
   flex-shrink: 0;
   display: flex;
-  position: absolute;
+  align-items: center;
   background: #0C0C0E;
-  margin-top: 380px;
+  margin-top: 20px;
+  margin-left: 695px;
+  margin-bottom: 40px;
 }
 
 .about__text {
@@ -246,17 +248,26 @@ h6 {
 }
 
 .carousel__pagination {
-  background: lightcyan;
   margin-top: 40px;
-  margin-left: 686px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  display: flex;  
+  justify-content: center;
+  gap: 10px;
+}
+
+.area__circle__buttons {
+  width: 26px;
+  height: 26px;
+  display: flex; 
   
 }
 
-.area__circle__button {
-  display: flex;  
-  justify-content: center;
-  align-items: center;
+.about__button {
+  cursor: pointer;
+  transition: 0.5s;
+  border-color: #fff;
+  background: #fff;
+  border-radius: 50%;
 }
 
 
@@ -271,7 +282,7 @@ h6 {
 
 
 
-.season-button {
+.season-button {  /* это надо обернуть*/
     accent-color: black;
   }
 
