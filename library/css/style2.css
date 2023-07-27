@@ -1,4 +1,4 @@
-* forum-regular - latin */
+/* forum-regular - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Forum';
@@ -18,7 +18,6 @@
 
 html {
     font-size: 14px;
-    scroll-behavior: smooth;
   }
 
 body {
@@ -103,45 +102,38 @@ h6 {
   }
 
 .header {
-    /*width: 1440px;*/
+    width: 1440px;
     height: 90px;
     padding: 20px 20px 20px 20px;
     background: #0C0C0E;
   }
 
 .header__wrapper {
+    background: lightpink;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-.header__navigation {
-   display: flex;
-   
-}
-
-.navigation {
-   
+.nav__wrapper {
+    background-color: lightseagreen;
     display: flex;
     align-items: center;
-    color: #FFF;    
+    justify-content: space-between;
+    padding: 0 40px;
   }
 
-.navigation__link a:hover {
-    color: #BB945F;
+.navigation {
+    background: lightgoldenrodyellow;
+    display: flex;
   }
-
-.navigation__link a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.5s;
-}
 
 .navigation__link {
+    /*background: lightskyblue;*/
     list-style: none;
-    padding: 0 30px;
     cursor: pointer;
-    transition: .3s;
+    text-decoration: underline;
+    padding: 0 30px;
     color: #FFF;
     font-family: Inter;
     font-size: 20px;
@@ -150,73 +142,28 @@ h6 {
     line-height: 50px; /* 250% */
   }
 
-  .social__navigation {
-    background: lightblue;
-    list-style: none;
+.header__button {
+    background: lightgreen;
     display: flex;
-    width: 102px;
-    height: 24px;
-    justify-content: space-between;
     align-items: center;
-    gap: 15px;
-    margin-left: 21px;
-  }
-
-.header__ico {
-    width: 28px;
-    height: 28px;
-    flex-shrink: 0;
+    margin-top: 31px;
+    margin-right: 20px;
+    margin-bottom: 31;
     margin-left: 40px;
+    padding: 0 40px;
   }
 
-  .welcome__wrapper {
-    
-    
-    /*background: url(./img/Welcome.png);*/
+.background-welcome {
+    width: 100%;
   }
+
+  .welcome {
+    
+  }
+
+
 
 .season-button {
     accent-color: black;
   }
-
-.buy-button:hover {
-   background-color: #BB945F;
-}
-
-.buy-button {
-    cursor: pointer;
-    transition: 0.5s;
-    font-family: 'Inter';
-    color: #0C0C0E;
-    text-align: center;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1px;
-    border-radius: 2px;
-    border: 1px solid #0C0C0E;
-    width: 75px;
-    height: 30px;
-    flex-shrink: 0;
-    background-color: #FFF;
-  }
-
-.own-button {
-    font-family: 'Inter';
-    color: #BB945F;
-    text-align: center;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1px;
-    border-radius: 2px;
-    border: 1px solid #BB945F;
-    width: 75px;
-    height: 30px;
-    flex-shrink: 0;
-    
-  }
-
 
