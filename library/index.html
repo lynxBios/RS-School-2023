@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="container">
-        
         <header class="header">
             <div class="wrapper header__wrapper">
                 <h1 class="title">Brooklyn Public Library</h1>
@@ -33,13 +32,13 @@
                         </li>                              
                     </ul>
                 </nav>
-
+    
                 <div class="header__ico">
                     <img src="./img/svg/icon-profile.svg" alt="profile button">
                 </div>                       
             </div>
         </header>
-
+    
         <main>
             <section class="welcome">
                 <div class="welcome__wrapper">                   
@@ -49,7 +48,7 @@
                         to the Brooklyn
                         <br>
                          Library</h3>
-                    <img class="welcome__bg" src="./img/Welcome.png" alt="background">                                               
+                    <img class="welcome__bg" src="./img/welcome.png" alt="background">                                               
                 </div>
             </section>
         
@@ -65,30 +64,26 @@
                             <img src="./img/image-3.png" alt="image3" class="img-3">
                         </div>
                     </div>
-                    <div class="carousel__pagination">
+                    <div class="carousel">
                         <div class="area__circle__buttons">
-                            <button class="about__button">
-                                <img src="./img/svg/active-slide-pagination.svg" alt="button-1">
-                            </button>
-                            <button class="about__button">
-                                <img src="./img/svg/active-slide-pagination-black-1.svg" alt="button-2">
-                            </button>
-                            <button class="about__button">
-                                <img src="./img/svg/active-slide-pagination-black-2.svg" alt="button-3">
-                            </button>
-                            
+                            <div class="carousel active__button"></div>
                         </div>
-                        
+                        <div class="area__circle__buttons">                        
+                            <div class="carousel inactive__button"></div>                        
+                        </div>                     
+                        <div class="area__circle__buttons">                        
+                            <div class="carousel inactive__button"></div>                                                
+                        </div>                    
                     </div>
                 </div>
             </section>
         
             <section class="favorites" id="favorites">
-                <div class="wrapper">
+                <div class="favorites__wrapper">
                     <h2 class="section-title">Favorites</h2>
                     <div class="line"></div>
-                    <h5>Pick favorites of season</h5>
-                    <form method="POST">
+                    <h5 class="favorites__subtitle">Pick favorites of season</h5>
+                    <form method="POST" class="favorites buttons__container">
                         <label class="season-button">
                             <input type="radio" name="season-utton" value="winter">
                             Winter
@@ -106,10 +101,10 @@
                             Autumn
                         </label>
                     </form>
-                    <div class="layout-2-column">
+                    <div class="layout-2">
                         <div class="favorites-items">
                             
-                            <div class="first-book">
+                            <div class="favorites item__1">
                                 <div class="stuff-pick">
                                     <div class="line-1"></div>
                                     <h6>Staff Picks</h6>                    
@@ -118,13 +113,13 @@
                                     <p>The Book Eaters By Sunyi Dean</p>
                                 </div>
                                 <p>An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
-                                <img src="./img/book-1.png" alt="book-1" class="book-1">
+                                <img src="./img/book-1.png" alt="book-1" class="favorites book-1">
                                 <div class="favorites-button">
                                     <button class="buy-button">Buy</button>
                                 </div>
                             </div>
         
-                            <div class="second-book">
+                            <div class="favorites item__2">
                                 <div class="stuff-pick">
                                     <div class="line-1"></div>
                                     <h6>Staff Picks</h6>                    
@@ -139,7 +134,7 @@
                                 </div>
                             </div>
         
-                            <div class="third-book">
+                            <div class="favorites item__3">
                                 <div class="stuff-pick">
                                     <div class="line-1"></div>
                                     <h6>Staff Picks</h6>                    
@@ -156,7 +151,7 @@
                                 </div>
                             </div>
         
-                            <div class="fourth-book">
+                            <div class="favorites item__4">
                                 <div class="stuff-pick">
                                     <div class="line-1"></div>
                                     <h6>Staff Picks</h6>                    
@@ -322,7 +317,7 @@
                 </div>
             </section>
         </main>
-   
+    
         <footer class="footer">
             <div class="wrapper">
                 <div class="frame__6">
