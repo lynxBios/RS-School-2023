@@ -26,6 +26,7 @@ body {
     margin: 0 auto;
     font-family: 'Forum';
     font-style: normal;
+    background: lightgray;  /* это для серого фона*/
   }
 
 h1 {
@@ -99,9 +100,10 @@ h6 {
     text-transform: capitalize;
   }
 
-.wrapper {
-    max-width: 1440px;
+.container {   /* это для контраста с серым фоном*/
+    max-width: 100%;
     margin: auto;
+    background: #fff;
   }
 
 .header {
@@ -212,6 +214,8 @@ h6 {
   text-transform: capitalize;
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .line {
@@ -247,47 +251,179 @@ h6 {
   justify-content: space-between;
 }
 
-.carousel__pagination {
+.carousel {
+  width: 100%;
   margin-top: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   display: flex;  
   justify-content: center;
-  gap: 10px;
+  align-items: center;
 }
 
 .area__circle__buttons {
+  cursor: pointer;
   width: 26px;
   height: 26px;
-  display: flex; 
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+}
+
+.active__button {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background: #BB945F;
+  border-radius: 50%;
+  padding: 0;
   
 }
 
-.about__button {
+.inactive__button {
   cursor: pointer;
-  transition: 0.5s;
-  border-color: #fff;
-  background: #fff;
+  width: 16px;
+  height: 16px;
+  background: #0C0C0E;
   border-radius: 50%;
+  padding: 0;
+  
 }
 
 
+.favorites__wrapper {
+  background: lightcyan;
+  width: 1440px;
+  height: 1150px; 
+  padding-left: 20px;
+  padding-right: 20px;
+  
+}
 
-
-
-
-
-
-
-
-
-
-
-.season-button {  /* это надо обернуть*/
-    accent-color: black;
+.favorites__subtitle {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  
   }
 
+.buttons__container {
+    display: flex;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    width: 700px;
+    height: 24px;
+    flex-shrink: 0;
+    gap: 90px;
+  }
+
+.season-button:hover {
+   font-weight: 700;
+}
+
+.season-button {  /* это надо обернуть*/
+    cursor: pointer;
+    accent-color: black;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+.layout-2 {
+  background-color: aquamarine;
+  width: 1400px;
+  height: 1190px;
+  
+}
+  
+.item__1 {
+    border: 1px solid #000;
+    background: #FFF;
+    width: 550px;
+    height: 555px;
+    flex-shrink: 0;
+    display: flex;
+    position: absolute;    
+    }
+
+.book-1 {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    bottom: 0;
+    right: -40px;
+  }
+  
+.item__2 {
+    border: 1px solid #000;
+    background: #FFF;
+    width: 550px;
+    height: 555px;
+    flex-shrink: 0;
+    display: flex;
+    position: absolute;
+    margin-left: 830px;    
+  }
+
+.book-2 {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    bottom: 0;
+    right: -40px;
+  }
+
+.item__3 {
+    border: 1px solid #000;
+    background: #FFF;
+    width: 550px;
+    height: 555px;
+    margin-top: 595px;
+    flex-shrink: 0;
+    display: flex;
+    position: absolute;
+  }
+
+  .book-3 {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    bottom: 0;
+    right: -40px;
+  }
+
+.item__4 {
+    border: 1px solid #000;
+    background: #FFF;
+    width: 550px;
+    height: 555px;
+    margin-left: 830px;
+    margin-top: 595px;
+    flex-shrink: 0;
+    display: flex;
+    position: absolute;
+  }
+
+  .book-4 {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    bottom: 0;
+    right: -40px;
+  }
+
+
+
+
 .buy-button:hover {
-   background-color: #BB945F;
+   background-color: #BB945F;   
 }
 
 .buy-button {
@@ -326,6 +462,13 @@ h6 {
     background-color: #FFF;
   }
 
+
+
+
+
+
+
+
 .social__navigation {
     list-style: none;
     display: flex;
@@ -338,5 +481,9 @@ h6 {
   }
 
 
+
+  .footer {
+    background: lightblue;
+  }
 
 

@@ -4,31 +4,18 @@
 
 
 
-
-
-.carousel__pagination {
-  background: lightcyan;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: space-around;
-  gap: 10px;
-}
-
-.area__circle__buttons {
-  /*position: relative;*/
-  width: 36px;
-  height: 36px;
-}
-
-.about__button {
-  /*position: absolute;*/
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
+  .area__circle__buttons {
+    width: 26px;
+    height: 26px;
+    display: flex; 
+    
+  }
   
+  .about__button {
+    cursor: pointer;
+    transition: 0.5s;
+    border-color: #fff;
+    background: #fff;
+    border-radius: 50%;
+  }
   
-}
