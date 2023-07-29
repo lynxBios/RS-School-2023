@@ -26,6 +26,11 @@ html {
   box-sizing: inherit;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
     max-width: 1440px;
     margin: 0 auto;
@@ -231,8 +236,9 @@ h6 {
   text-transform: capitalize;
   display: flex;
   justify-content: center;
+  text-align: center;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 20px;  
 }
 
 .line {
@@ -240,12 +246,15 @@ h6 {
   height: 1px;
   flex-shrink: 0;
   display: flex;
+  justify-content: center;
   align-items: center;
   background: #0C0C0E;
   margin-top: 20px;
   margin-left: 695px;
-  margin-bottom: 40px;
+  margin-bottom: 40px;  
 }
+
+/*Section About styles start*/
 
 .about__text {
   color: #000;
@@ -269,12 +278,12 @@ h6 {
 }
 
 .carousel {
-  width: 100%;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  width: 100%;  
   display: flex;  
   justify-content: center;
   align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;  
 }
 
 .area__circle__buttons {
@@ -306,22 +315,26 @@ h6 {
   
 }
 
+/*Section About styles end*/
+
+/*Section Favorites styles start*/
+
 .favorites__wrapper {
-  height: 1439px; 
+  /*height: 1439px;*/
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .favorites__subtitle {
-  color: #000;
+  height: 24px;
+  display: flex;  
   text-align: center;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  display: flex;
-  
+  color: #000;   
 }
 
 .buttons__container {
@@ -349,90 +362,91 @@ h6 {
   line-height: normal;
 }
 
-.layout-2 {  
+.favorites-items {
   width: 1400px;
-  height: 1190px;  
+  height: 1190px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 20px;
 }
   
-.item__1 {
-  background-color: aquamarine;
+.favorites__item-1 {
   border: 1px solid #000;
-  /*background: #FFF;*/
+  background: #FFF;
   width: 550px;
   height: 555px;
-  flex-shrink: 0;
-  display: flex;
-  position: absolute;    
+  flex-shrink: 0;  
+  padding-left: 15px;  
+  padding-bottom: 20px;
+  margin-right: 260px;
+  margin-bottom: 40px;
+  position: relative;
 }
 
-.book-1 {
-    position: absolute;
-    width: 200px;
-    height: 300px;
-    bottom: -1px;
-    right: -40px;
-  }
-
-.stuff-pick {
-  background: lightcyan;
-  width: 102px;
+.favorites__stuff-picks {
   height: 40px;
-  margin-top: 15px;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  color: #000;
+  font-family: Forum;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;  
+  margin-bottom: 0;
 }
 
-.line-1 {
+.favorites__line-1 {
   width: 60px;
   height: 1px;
-  background: #BB945F;
+  background: #BB945F;  
 }
 
-.text-title {
-  background: lightgreen;
+.favorites__text-title {
+  width: 168px;
+  height: 80px;
+}
+
+.name-book {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 266.667% */
+  letter-spacing: 2px;
+  text-transform: uppercase;    
+}
+
+.author-book {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  padding-bottom: 20px;
 }
 
 .favorites__content {
-  background: lightslategray;
+  width: 355px;  
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 266.667% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 15px;
 }
 
-
-
-
-
-
-.item__2 {
-    border: 1px solid #000;
-    background: #FFF;
-    width: 550px;
-    height: 555px;
-    flex-shrink: 0;
-    display: flex;
-    position: absolute;
-    margin-left: 810px;    
-}
-
-.book-2 {
-    position: absolute;
-    width: 200px;
-    height: 300px;
-    bottom: -1px;
-    right: -40px;
-}
-
-.item__3 {
-    border: 1px solid #000;
-    background: #FFF;
-    width: 550px;
-    height: 555px;
-    margin-top: 595px;
-    flex-shrink: 0;
-    display: flex;
-    position: absolute;
-}
-
-.book-3 {
+.favorites__book-1 {
     position: absolute;
     width: 200px;
     height: 300px;
@@ -440,19 +454,63 @@ h6 {
     right: -40px;
   }
 
-.item__4 {
+
+.favorites__item-2 {
     border: 1px solid #000;
     background: #FFF;
     width: 550px;
     height: 555px;
-    margin-left: 810px;
-    margin-top: 595px;
     flex-shrink: 0;
-    display: flex;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+.favorites__book-2 {
     position: absolute;
+    width: 200px;
+    height: 300px;
+    bottom: -1px;
+    right: -40px;
 }
 
-.book-4 {
+.favorites__item-3 {
+    border: 1px solid #000;
+    background: #FFF;
+    width: 550px;
+    height: 555px;    
+    flex-shrink: 0;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    margin-right: 260px;
+    margin-bottom: 40px;
+    position: relative;
+    
+}
+
+.favorites__book-3 {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    bottom: -1px;
+    right: -40px;
+  }
+
+.favorites__item-4 {
+    border: 1px solid #000;
+    background: #FFF;
+    width: 550px;
+    height: 555px;
+    flex-shrink: 0;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    
+}
+
+.favorites__book-4 {
     position: absolute;
     width: 200px;
     height: 300px;
@@ -464,9 +522,11 @@ h6 {
 
 
 .buy-button:hover {
-   background-color: #BB945F;   
+  background-color: #BB945F;
+  border-radius: 2px; 
+  border: 1px solid #BB945F; 
+  cursor: pointer;    
 }
-
 .buy-button {
     cursor: pointer;
     transition: 0.5s;
@@ -484,6 +544,7 @@ h6 {
     height: 30px;
     flex-shrink: 0;
     background-color: #FFF;
+    margin-bottom: 15px;
 }
 
 .own-button {
@@ -500,10 +561,10 @@ h6 {
     width: 75px;
     height: 30px;
     flex-shrink: 0;
-    background-color: #FFF;
+    background-color: #FFF;    
 }
 
-
+/*Section Favorites styles end*/
 
 
 
