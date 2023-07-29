@@ -183,15 +183,9 @@ h6 {
 
 .welcome {
   width: 1440px;
-  height: 600;
-  display: flex;
-  flex-shrink: 0;  
-}
-
-.welcome__bg {
-  display: flex;
-  width: 1440px;
-  height: 600;
+  height: 600px;  
+  background: url(../img/background.png) no-repeat center;
+  background-size: cover;
 }
 
 .overlay {
@@ -223,6 +217,8 @@ h6 {
   padding: 35px 40px;
   left: 100; right: 100; top: 100; bottom: 100;
 }
+
+/*Section Welcome styles end*/
 
 .section-title {
   color: #0C0C0E;
