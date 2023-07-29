@@ -17,15 +17,22 @@
   }
 
 html {
+    box-sizing: border-box;
     font-size: 14px;
     scroll-behavior: smooth;
   }
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
+    line-height: 1.2;
     font-family: 'Forum';
     font-style: normal;
+    color:#0C0C0E;
     background: lightgray;  /* это для серого фона*/
   }
 
@@ -100,65 +107,79 @@ h6 {
     text-transform: capitalize;
   }
 
-.container {   /* это для контраста с серым фоном*/
+.wrapper {   /* это для контраста с серым фоном*/
     max-width: 100%;
-    margin: auto;
+    margin: 0 auto;
     background: #fff;
   }
 
+/*Header styles start*/
+
 .header {
-    height: 90px;
-    padding: 20px 20px 20px 20px;
-    background: #0C0C0E;
-  }
+  width: 100%;  
+  height: 90px;
+  background: #0C0C0E;
+}
 
 .header__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 20px 20px;
+  background: #0C0C0E;
+}
 
-.navigation {   
-    display: flex;
-    color: #FFF;
-    margin-left: 700px;
-    width: 584;
-    line-height: 50px;
-    justify-content: space-between;    
-  }
+.header__list {
+  list-style: none;
+  cursor: pointer;
+  transition: .3s;
+  display: flex;
+  flex-wrap: wrap;
+  color: #FFF;
+  margin-left: 700px;
+  width: 584;
+  line-height: 50px;
+}
 
-.navigation__link a:hover {
+.header__item a:hover { 
     color: #BB945F;
     text-decoration: underline;
   }
 
-.navigation__link a {
+.header__item a {
     text-decoration: none;
     color: white;
     transition: color 0.5s;
 }
 
-.navigation__link {
-    list-style: none;
-    cursor: pointer;
-    transition: .3s;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 50px; /* 250% */
-    display: inline;
-    text-align: center;
-    margin-right: 26px;
-  }
+.header__item {    
+  margin-right: 30px;  /*расстояние между элементами меню в 30px*/
+}
+
+.header__item:last-child { /*убираем отступ справа 30px у последнего элемента*/
+  margin-right: 0;
+}
+
+.header__link {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 250% */
+}
 
 .header__ico {
     width: 28px;
     height: 28px;
+    display: flex;
     flex-shrink: 0;
     margin-left: 40px;
   }
+
+/*Header styles end*/
+
+/*Section Welcome styles start*/
 
 .welcome {
   width: 1440px;
@@ -289,14 +310,10 @@ h6 {
   
 }
 
-
 .favorites__wrapper {
-  background: lightcyan;
-  width: 1440px;
-  height: 1150px; 
+  height: 1439px; 
   padding-left: 20px;
   padding-right: 20px;
-  
 }
 
 .favorites__subtitle {
@@ -309,7 +326,7 @@ h6 {
   line-height: normal;
   display: flex;
   
-  }
+}
 
 .buttons__container {
     display: flex;
@@ -319,48 +336,76 @@ h6 {
     height: 24px;
     flex-shrink: 0;
     gap: 90px;
-  }
+}
 
 .season-button:hover {
    font-weight: 700;
 }
 
 .season-button {  /* это надо обернуть*/
-    cursor: pointer;
-    accent-color: black;
-    color: #000;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
+  cursor: pointer;
+  accent-color: black;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
-.layout-2 {
-  background-color: aquamarine;
+.layout-2 {  
   width: 1400px;
-  height: 1190px;
-  
+  height: 1190px;  
 }
   
 .item__1 {
-    border: 1px solid #000;
-    background: #FFF;
-    width: 550px;
-    height: 555px;
-    flex-shrink: 0;
-    display: flex;
-    position: absolute;    
-    }
+  background-color: aquamarine;
+  border: 1px solid #000;
+  /*background: #FFF;*/
+  width: 550px;
+  height: 555px;
+  flex-shrink: 0;
+  display: flex;
+  position: absolute;    
+}
 
 .book-1 {
     position: absolute;
     width: 200px;
     height: 300px;
-    bottom: 0;
+    bottom: -1px;
     right: -40px;
   }
-  
+
+.stuff-pick {
+  background: lightcyan;
+  width: 102px;
+  height: 40px;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.line-1 {
+  width: 60px;
+  height: 1px;
+  background: #BB945F;
+}
+
+.text-title {
+  background: lightgreen;
+}
+
+.favorites__content {
+  background: lightslategray;
+}
+
+
+
+
+
+
 .item__2 {
     border: 1px solid #000;
     background: #FFF;
@@ -369,16 +414,16 @@ h6 {
     flex-shrink: 0;
     display: flex;
     position: absolute;
-    margin-left: 830px;    
-  }
+    margin-left: 810px;    
+}
 
 .book-2 {
     position: absolute;
     width: 200px;
     height: 300px;
-    bottom: 0;
+    bottom: -1px;
     right: -40px;
-  }
+}
 
 .item__3 {
     border: 1px solid #000;
@@ -389,13 +434,13 @@ h6 {
     flex-shrink: 0;
     display: flex;
     position: absolute;
-  }
+}
 
-  .book-3 {
+.book-3 {
     position: absolute;
     width: 200px;
     height: 300px;
-    bottom: 0;
+    bottom: -1px;
     right: -40px;
   }
 
@@ -404,20 +449,20 @@ h6 {
     background: #FFF;
     width: 550px;
     height: 555px;
-    margin-left: 830px;
+    margin-left: 810px;
     margin-top: 595px;
     flex-shrink: 0;
     display: flex;
     position: absolute;
-  }
+}
 
-  .book-4 {
+.book-4 {
     position: absolute;
     width: 200px;
     height: 300px;
-    bottom: 0;
+    bottom: -1px;
     right: -40px;
-  }
+}
 
 
 
@@ -443,7 +488,7 @@ h6 {
     height: 30px;
     flex-shrink: 0;
     background-color: #FFF;
-  }
+}
 
 .own-button {
     font-family: 'Inter';
@@ -460,7 +505,7 @@ h6 {
     height: 30px;
     flex-shrink: 0;
     background-color: #FFF;
-  }
+}
 
 
 
@@ -478,12 +523,14 @@ h6 {
     align-items: center;
     gap: 15px;
     padding-left: 0;
-  }
+}
 
 
 
-  .footer {
+.footer {
     background: lightblue;
-  }
+}
+
+
 
 

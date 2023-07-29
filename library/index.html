@@ -8,27 +8,27 @@
     <link rel="icon" href="./img/svg/favicon.svg">
 </head>
 <body>
-    <div class="container">
+    <div class="wrapper">
         <header class="header">
             <div class="wrapper header__wrapper">
                 <h1 class="title">Brooklyn Public Library</h1>
                 
                 <nav class="header__navigation">
-                    <ul class="navigation">
-                        <li class="navigation__link">
-                            <a href="#about" class="header__li">About</a>
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#about" class="header__link">About</a>
                         </li>
-                        <li class="navigation__link">
-                            <a href="#favorites" class="header__li">Favorites</a>
+                        <li class="header__item">
+                            <a href="#favorites" class="header__link">Favorites</a>
                         </li>
-                        <li class="navigation__link">
-                            <a href="#coffee-shop" class="header__li">Coffee shop</a>
+                        <li class="header__item">
+                            <a href="#coffee-shop" class="header__link">Coffee shop</a>
                         </li>
-                        <li class="navigation__link">
-                            <a href="#contacts" class="header__li">Contacts</a>
+                        <li class="header__item">
+                            <a href="#contacts" class="header__link">Contacts</a>
                         </li>
-                        <li class="navigation__link">
-                            <a href="#library-card" class="header__li">Library Card</a>
+                        <li class="header__item">
+                            <a href="#library-card" class="header__link">Library Card</a>
                         </li>                              
                     </ul>
                 </nav>
@@ -39,7 +39,7 @@
             </div>
         </header>
     
-        <main>
+        <main class="main">
             <section class="welcome">
                 <div class="welcome__wrapper">                   
                     <div class="overlay"></div>
@@ -105,14 +105,16 @@
                         <div class="favorites-items">
                             
                             <div class="favorites item__1">
-                                <div class="stuff-pick">
-                                    <div class="line-1"></div>
-                                    <h6>Staff Picks</h6>                    
+                                <div class="">                                    
+                                    <h6 class="favorites stuff-pick">Staff Picks</h6>                    
                                 </div>
-                                <div class="text-title">
+
+                                <div class="favorites line-1"></div>
+
+                                <div class="favorites text-title">
                                     <p>The Book Eaters By Sunyi Dean</p>
                                 </div>
-                                <p>An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
+                                <p class="favorites__content">An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
                                 <img src="./img/book-1.png" alt="book-1" class="favorites book-1">
                                 <div class="favorites-button">
                                     <button class="buy-button">Buy</button>
