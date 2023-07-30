@@ -122,67 +122,74 @@ h6 {
 
 /*Header styles start*/
 
-.header {
-  width: 100%;  
+
+.header__wrapper {    
+  width: 1440px;
   height: 90px;
   background: #0C0C0E;
+  display: flex;
+  padding: 20px 20px 20px 20px;
+  margin-bottom: 0;  
 }
 
-.header__wrapper {
+.header__title {
+  width: 294px;
+  height: 50px;
+  margin-left: 0;    
+}
+
+.header__navigation {
+  width: 585px;
+  height: 50px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px 20px 20px 20px;
-  background: #0C0C0E;
-}
-
-.header__list {
-  list-style: none;
-  cursor: pointer;
-  transition: .3s;
-  display: flex;
-  flex-wrap: wrap;
-  color: #FFF;
-  margin-left: 700px;
-  width: 584;
-  line-height: 50px;
-}
-
-.header__item a:hover { 
-    color: #BB945F;
-    text-decoration: underline;
-  }
-
-.header__item a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.5s;
-}
-
-.header__item {    
-  margin-right: 30px;  /*расстояние между элементами меню в 30px*/
-}
-
-.header__item:last-child { /*убираем отступ справа 30px у последнего элемента*/
-  margin-right: 0;
-}
-
-.header__link {
   color: #FFF;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 50px; /* 250% */
+  line-height: 50px; /* 250% */    
+  margin-left: 750px;
+  margin-right: 40px;   
 }
 
+ul {
+  padding-left: 0;    
+}
+
+.header__list {
+  list-style: none;    
+  cursor: pointer;
+  transition: .5s;
+  display: flex;
+  justify-content: space-between; 
+  width: 585px;
+  gap: 30px;
+}
+
+.header__item {    
+  display: inline;    
+}
+
+.header__item a:hover { 
+  color: #BB945F;
+  text-decoration: underline;
+}
+
+.header__item a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.5s;
+}
+
+
 .header__ico {
-    width: 28px;
-    height: 28px;
-    display: flex;
-    flex-shrink: 0;
-    margin-left: 40px;
-  }
+  width: 28px;
+  height: 28px;
+  margin-top: 11px;
+  
+}
+
 
 /*Header styles end*/
 
