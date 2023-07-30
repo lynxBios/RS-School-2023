@@ -655,7 +655,85 @@ h6 {
 
 /*Section Coffee Shop styles end*/
 
+/*Section Contacts styles start*/
 
+.contacts__wrapper {
+  border: 1px solid violet;
+  padding: 0 20px 40px;
+}
+.layout-2-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contacts-info {
+  border: 1px solid blue;
+  width: 503px;
+  height: 380px;
+  padding: 0;
+ 
+}
+
+.column__title {
+  border: 1px solid rgb(201, 11, 230);
+  width: 282px;
+  height: 40px;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.phone-info {
+  border: 1px solid rgb(11, 230, 40);
+  width: 503px;
+  height: 160px;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.contacts__text-1 {
+  border: 1px solid brown;
+  width: 306px;
+  height: 40px;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.contacts__senior-stuff {
+  border: 1px solid rgb(11, 37, 230);
+  /*color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin: 0;*/
+}
+
+
+/*Section Contacts styles end*/
 
 
 
