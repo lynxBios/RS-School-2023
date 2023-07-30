@@ -87,6 +87,8 @@ h4 {
     line-height: 40px; /* 100% */
     letter-spacing: 2px;
     text-transform: capitalize;
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 
 h5 {
@@ -406,8 +408,10 @@ h6 {
 }
 
 .favorites__text-title {
-  width: 168px;
+  /*width: 200px;*/
   height: 80px;
+  background: lavender;
+    
 }
 
 .name-book {
@@ -418,7 +422,8 @@ h6 {
   font-weight: 700;
   line-height: 40px; /* 266.667% */
   letter-spacing: 2px;
-  text-transform: uppercase;    
+  text-transform: uppercase;
+        
 }
 
 .author-book {
@@ -453,7 +458,6 @@ h6 {
     bottom: -1px;
     right: -40px;
   }
-
 
 .favorites__item-2 {
     border: 1px solid #000;
@@ -518,9 +522,6 @@ h6 {
     right: -40px;
 }
 
-
-
-
 .buy-button:hover {
   background-color: #BB945F;
   border-radius: 2px; 
@@ -565,6 +566,94 @@ h6 {
 }
 
 /*Section Favorites styles end*/
+
+/*Section Coffee Shop styles start*/
+
+.coffe-shop__wrapper {
+  padding: 0 20px 40px;
+}
+
+.menu__wrapper-text {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  margin-bottom: 40px;
+}
+
+.menu__text {
+
+}
+
+.menu__wrapper {  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.coffe-and-tea-menu {
+  width: 438px;
+  height: 520px;  
+  margin-right: 480px;
+}
+
+.menu__item {
+  display: flex;
+  justify-content: space-between;  
+}
+
+.name__item {
+  width: 196px;
+  max-height: 40px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.menu__item:last-child {
+  margin-bottom: 0;
+}
+
+.menu__line-2 {
+  width: 100px;
+  height: 1px;
+  background: #BB945F;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.price__item {
+  color: #000;
+  font-family: Forum;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.deserts {
+  width: 482px;
+  height: 520px;
+}
+
+.deserts__title {
+  margin-left: 161px;
+}
+
+/*Section Coffee Shop styles end*/
 
 
 
