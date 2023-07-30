@@ -1116,7 +1116,6 @@ input::-webkit-inner-spin-button {
   border: 1px solid #0C0C0E;
   background: #fff;
 }
-
 /*Section Library Card styles end*/
 
 /*Footer styles start*/
@@ -1142,8 +1141,13 @@ input::-webkit-inner-spin-button {
   align-items: center;
 }
 
+.address:hover {
+  color: #BB945F;
+}
+
 .address {
   text-decoration: none;
+  transition: .5s;
   color: #FFF;
   font-family: Inter;
   font-size: 15px;
@@ -1183,14 +1187,14 @@ input::-webkit-inner-spin-button {
 }
 
 .social__navigation {
-    list-style: none;
-    display: flex;
-    width: 102px;
-    height: 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    padding-left: 0;
+  list-style: none;  
+  display: flex;
+  width: 102px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-left: 0;
 }
 
 .line__3 {
@@ -1204,8 +1208,7 @@ input::-webkit-inner-spin-button {
   width: 1400px; 
   height: 22px; 
   display: flex;
-  justify-content: space-between;
-  
+  justify-content: space-between;  
 }
 
 .year {
