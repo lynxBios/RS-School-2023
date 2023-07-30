@@ -408,10 +408,10 @@ h6 {
 }
 
 .favorites__text-title {
-  /*width: 200px;*/
+  max-width: 355px;
   height: 80px;
-  background: lavender;
-    
+  margin-top: 20px;
+  height: 80px;   
 }
 
 .name-book {
@@ -422,8 +422,7 @@ h6 {
   font-weight: 700;
   line-height: 40px; /* 266.667% */
   letter-spacing: 2px;
-  text-transform: uppercase;
-        
+  text-transform: uppercase;  
 }
 
 .author-book {
@@ -435,11 +434,12 @@ h6 {
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
-  padding-bottom: 20px;
+  padding-bottom: 20px;  
 }
 
 .favorites__content {
-  width: 355px;  
+  width: 355px;
+  max-height: 320px;  
   color: #000;
   font-family: Inter;
   font-size: 15px;
@@ -528,6 +528,14 @@ h6 {
   border: 1px solid #BB945F; 
   cursor: pointer;    
 }
+
+.buy-button-2:hover {
+  background-color: #BB945F;
+  border-radius: 2px; 
+  border: 1px solid #BB945F; 
+  cursor: pointer;    
+}
+
 .buy-button {
     cursor: pointer;
     transition: 0.5s;
@@ -548,6 +556,27 @@ h6 {
     margin-bottom: 15px;
 }
 
+.buy-button-2 {
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: 'Inter';
+  color: #0C0C0E;
+  text-align: center;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+  width: 75px;
+  height: 30px;
+  flex-shrink: 0;
+  background-color: #FFF;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
 .own-button {
     font-family: 'Inter';
     color: #BB945F;
@@ -562,7 +591,9 @@ h6 {
     width: 75px;
     height: 30px;
     flex-shrink: 0;
-    background-color: #FFF;    
+    background-color: #FFF;
+    margin-top: 80px;
+    margin-bottom: 15px;
 }
 
 /*Section Favorites styles end*/
@@ -607,7 +638,32 @@ h6 {
 }
 
 .name__item {
-  width: 196px;
+  width: 215px;
+  max-height: 40px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: 40px;  
+}
+
+.menu__item:last-child {
+  margin-bottom: 0;
+}
+
+.menu__item-deserts {
+  display: flex;
+  justify-content: flex-end;
+  gap: 60px;
+}
+
+.name__item-2 {
+  width: 215px;
   max-height: 40px;
   color: #000;
   font-family: Inter;
@@ -619,10 +675,9 @@ h6 {
   text-transform: capitalize;
   margin-top: 0;
   margin-bottom: 40px;
-}
+  display: flex;
+  justify-content: flex-end;
 
-.menu__item:last-child {
-  margin-bottom: 0;
 }
 
 .menu__line-2 {
@@ -658,24 +713,21 @@ h6 {
 /*Section Contacts styles start*/
 
 .contacts__wrapper {
-  border: 1px solid violet;
+  border: none;
   padding: 0 20px 40px;
 }
-.layout-2-column {
+.layout-2-column {  
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
 .contacts-info {
-  border: 1px solid blue;
-  width: 503px;
+  width: 507px;
   height: 380px;
-  padding: 0;
- 
+  padding: 0; 
 }
 
 .column__title {
-  border: 1px solid rgb(201, 11, 230);
   width: 282px;
   height: 40px;
   color: #000;
@@ -690,11 +742,11 @@ h6 {
   margin-left: 0;
   margin-top: 0;
   margin-bottom: 40px;
+  display: flex;
 }
 
 .phone-info {
-  border: 1px solid rgb(11, 230, 40);
-  width: 503px;
+  width: 507px;
   height: 160px;
   color: #000;
   text-align: center;
@@ -709,19 +761,63 @@ h6 {
 }
 
 .contacts__text-1 {
-  border: 1px solid brown;
-  width: 306px;
+  /*width: 306px;*/
   height: 40px;
   margin-left: 0;
   margin-top: 0;
   margin-bottom: 40px;
   padding: 0;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.contacts__text-2 {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.contacts__text-3 {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .contacts__senior-stuff {
-  border: 1px solid rgb(11, 37, 230);
-  /*color: #000;
+  margin-top: 40px;
+}
+
+.senior__title {
+  color: #000;
   text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.director {
+  color: #000;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
@@ -729,11 +825,150 @@ h6 {
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
-  margin: 0;*/
+}
+
+.job-title {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  display: flex;
 }
 
 
 /*Section Contacts styles end*/
+
+/*Section Library Card styles start*/
+
+.library-card__wrapper {
+  border: 1px solid rgb(11, 37, 230);
+  padding: 0 20px 40px;
+}
+
+.layout-2-column {
+  border: 1px solid rgb(139, 151, 241);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.find__card-wrapper {
+  border: 1px solid rgb(230, 11, 106);
+  width: 600px;
+  /*height: 543px;*/
+  margin-right: 344px;
+  margin-bottom: 0;
+}
+
+.find__title {
+  height: 36px;
+  color: #000;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  margin-left: 138px;
+  margin-bottom: 30px;
+}
+
+.card__body {
+  border: 3px solid #BB945F;
+  background: #FFF;
+  display: flex;
+  width: 600px;
+  height: 387px;
+  padding-bottom: 0px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 20px 20px 94px;
+}
+
+.card__bg {
+  width: 560px;
+  height: 272px;
+  flex-shrink: 0;
+  background: #BB945F;
+  padding: 20px 20px 25px;
+ 
+}
+
+.card__title {
+  border: 1px solid rgb(31, 230, 28);
+  /*width: 294px;*/
+  height: 50px;
+  color: #000;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 166.667% */
+  letter-spacing: 0.6px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.username {
+  border-radius: 10px;
+  background: #FFF;
+  width: 520px;
+  height: 66px;
+  flex-shrink: 0;
+  padding-top: 8px;
+  padding-right: 318px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.usernumber {
+  border-radius: 10px;
+  background: #FFF;
+  width: 520px;
+  height: 66px;
+  flex-shrink: 0;
+  padding-top: 8px;
+  padding-right: 333px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  margin-bottom: 45px;  /*Это толкает кнопку вниз*/
+}
+
+.placeholder {
+  color: #8E8E8E;
+  border: 0;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 166.667% */
+  letter-spacing: 0.6px;
+
+}
+
+.check-card__button {
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+
+  margin-left: 179px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.get__card-wrapper {
+  border: 1px solid rgb(11, 37, 230);
+  width: 456px;
+  height: 253px; 
+}
+
+/*Section Library Card styles end*/
 
 
 
