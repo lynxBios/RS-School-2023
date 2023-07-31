@@ -327,7 +327,6 @@ h6 {
 /*Section Favorites styles start*/
 
 .favorites__wrapper {
-  /*height: 1439px;*/
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -341,24 +340,26 @@ h6 {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  color: #000;   
+  color: #000; 
 }
 
 .buttons__container {
-    display: flex;
-    margin-bottom: 40px;
-    margin-top: 40px;
-    width: 700px;
-    height: 24px;
-    flex-shrink: 0;
-    gap: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  width: 700px;
+  height: 24px;
+  flex-shrink: 0;
+  gap: 90px;
 }
 
 .season-button:hover {
    font-weight: 700;
 }
 
-.season-button {  /* это надо обернуть*/
+.season-button {
   cursor: pointer;
   accent-color: black;
   color: #000;
@@ -368,6 +369,44 @@ h6 {
   font-weight: 400;
   line-height: normal;
 }
+
+.area__winter {
+  width: 114px;
+  height: 34px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.area__spring {
+  width: 109px;
+  height: 34px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.area__summer {
+  width: 126px;
+  height: 34px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.area__autumn {
+  width: 121px;
+  height: 34px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 .favorites-items {
   width: 1400px;
