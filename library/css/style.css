@@ -41,6 +41,10 @@ body {
     background: lightgray;  /* это для серого фона*/
   }
 
+ul {
+  padding-left: 0;    
+}
+
 h1 {
     color: #FFF;
     font-family: Forum;
@@ -48,8 +52,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: 50px; /* 166.667% */
-    letter-spacing: 0.6px;
-    
+    letter-spacing: 0.6px;    
   }
 
 h3 {
@@ -152,10 +155,6 @@ h6 {
   margin-right: 40px;   
 }
 
-ul {
-  padding-left: 0;    
-}
-
 .header__list {
   list-style: none;    
   cursor: pointer;
@@ -195,6 +194,7 @@ ul {
   height: 600px;  
   background: url(../img/background.png) no-repeat center;
   background-size: cover;
+  position: relative;
 }
 
 .overlay {
@@ -256,6 +256,7 @@ ul {
   align-items: center;
   background: #0C0C0E;
   margin-top: 20px;
+  margin-right: 695px;
   margin-left: 695px;
   margin-bottom: 40px;  
 }
@@ -913,6 +914,7 @@ ul {
   letter-spacing: 0.6px;
   margin-left: 138px;
   margin-bottom: 30px;
+  margin-top: 0;
 }
 
 .card__body {
