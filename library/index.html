@@ -52,10 +52,10 @@
             </section>
         
             <section class="about" id="about">
-                <div class="wrapper">
-                    <h2 class="section-title">About</h2>
-                    <div class="line"></div>
-                    <p class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
+                <h2 class="section-title">About</h2>
+                <div class="line"></div>
+                <div class="about__wrapper">                    
+                    <span class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </span>
                     <div class="about layout-3-column">
                         <div class="images-items">
                             <img src="./img/image-1.png" alt="image1" class="img-1">
@@ -84,30 +84,26 @@
                     <span class="favorites__subtitle">Pick favorites of season</span>
 
                     <form method="POST" class="favorites buttons__container">
-                        <div class="area__winter">
-                            <label class="season-button">
-                                <input type="radio" name="season-utton" value="winter">
-                                Winter
-                            </label>
-                        </div>
-                        <div class="area__spring">
-                            <label class="season-button">
-                                <input type="radio" name="season-utton" value="spring">
-                                Spring
-                            </label>
-                        </div>
-                        <div class="area__summer">
-                            <label class="season-button">
-                                <input type="radio" name="season-utton" value="summer">
-                                Summer
-                            </label>
-                        </div>
-                        <div class="area__autumn">
-                            <label class="season-button">
-                                <input type="radio" name="season-utton" value="autumn">
-                                Autumn
-                            </label>
-                        </div>
+                        <label class="custom-radio">
+                            <input type="radio" name="season" class="real-radio-btn">
+                            <span class="custom-radio-btn"></span>
+                            <span class="season-text">Winter</span>                                
+                        </label>
+                        <label class="custom-radio">
+                            <input type="radio" name="season" class="real-radio-btn">
+                            <span class="custom-radio-btn"></span>
+                            <span class="season-text">Spring</span>                            
+                        </label>
+                        <label class="custom-radio">
+                            <input type="radio" name="season" class="real-radio-btn">
+                            <span class="custom-radio-btn"></span>
+                            <span class="season-text">Summer</span>                            
+                        </label>
+                        <label class="custom-radio">
+                            <input type="radio" name="season" class="real-radio-btn">
+                            <span class="custom-radio-btn"></span>
+                            <span class="season-text">Autumn</span>                            
+                        </label>
                     </form>
 
                     <div class="favorites-items">                            
