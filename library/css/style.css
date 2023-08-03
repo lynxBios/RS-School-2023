@@ -393,7 +393,7 @@ h6 {
   width: 17px;
   height: 17px;
   background: #fff;
-  border: 2px solid #0C0C0E; /* Толщина, стиль, цвет рамки*/
+  border: 3px solid #0C0C0E; /* Толщина, стиль, цвет рамки*/
   border-radius: 50%; /* Получение круга*/  
   vertical-align: text-bottom; /* Выравнивание кнопки по центру*/
   margin-right: 20px; /* Отступ между кнопкой и меткой*/
