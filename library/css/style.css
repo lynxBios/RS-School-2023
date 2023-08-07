@@ -137,7 +137,8 @@ h6 {
 
 .header__title {
   height: 50px;
-  margin-left: 0;    
+  margin-left: 0;
+  white-space: nowrap;
 }
 
 .header__navigation {
@@ -184,6 +185,38 @@ h6 {
   width: 28px;
   height: 28px;
 }
+
+.header__burger {
+  width: 45px;
+  height: 20px;
+  position: relative;
+  display: none;
+}
+
+.burger__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #FFF;
+  position: absolute;
+  left: 0;
+}
+
+
+
+.burger__line_first {
+  top: 0;
+}
+
+.burger__line_second {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger__line_third {
+  bottom: 0;
+}
+
 /*Header styles end*/
 
 
@@ -1317,3 +1350,18 @@ input::-webkit-inner-spin-button {
 }
 
 /*Footer styles end*/
+
+/*Media start*/
+
+@media screen and (max-width: 768px) {
+  .header__burger {
+    display: block;
+  }
+   
+  
+  .header__navigation {
+    display: none;
+  }
+}
+
+/*Media end*/
