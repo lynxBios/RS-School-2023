@@ -436,7 +436,7 @@ h6 {
   font-weight: 700;
 }
 
-.favorites-items {
+.favorites__items {
   width: 1400px;
   height: 1190px;
   display: grid;
@@ -452,7 +452,6 @@ h6 {
   padding-left: 15px;  
   padding-bottom: 20px;
   margin-right: 260px;
-  /*margin-bottom: 40px;*/
   position: relative;
 }
 
@@ -1349,6 +1348,8 @@ input::-webkit-inner-spin-button {
     padding-right: 40px;
   }
 
+  /* Section About start*/
+
   .about {    
     justify-content: center;
   }
@@ -1416,6 +1417,80 @@ input::-webkit-inner-spin-button {
     border-radius: 50%;
     padding: 0; 
   }
+  /* Section About end*/
+
+
+
+  /* Section Favorites start*/
+
+  .favorites__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+  }
+
+  .favorites__wrapper_media { 
+    width: 99.8%;
+    height: 2380px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;    
+  }
+
+  .favorites__subtitle {
+    width: 768px;
+    padding-left: 20px;
+  }
+
+  .buttons__container {
+    /*width: 100%;*/
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 20px;
+  }
+
+  .favorites__items {
+    margin-right: 40px;    
+  }
+  
+  .favorites__item-1 {
+    margin: 0;
+  }
+
+  .favorites__item-2 {
+    margin: 0;
+  }
+  .favorites__item-3 {
+    margin: 0;
+  }
+
+  .favorites__item-4 {
+    margin: 0;
+  }
+  /* Section Favorites end*/
+
+
+  /* Section Coffee Shop start*/
+
+  .coffe-shop__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coffee-shop__wrapper_media { 
+    width: 99.8%;
+    height: 2380px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;    
+  }
+
+
+
+  /* Section Coffee Shop end*/
 
 }
 
