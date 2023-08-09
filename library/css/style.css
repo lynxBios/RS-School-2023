@@ -1426,7 +1426,7 @@ input::-webkit-inner-spin-button {
   .favorites__wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;  
   }
 
   .favorites__wrapper_media { 
@@ -1435,7 +1435,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    align-items: center;    
+    align-items: center;
   }
 
   .favorites__subtitle {
@@ -1475,17 +1475,30 @@ input::-webkit-inner-spin-button {
 
   .coffe-shop__wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column;    
   }
 
   .coffee-shop__wrapper_media { 
-    width: 99.8%;
-    height: 2380px;
+    width: 99.8%;       
+  }
+
+  .menu__wrapper {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    align-items: center;    
+    gap: 40px;    
+  }
+
+  .menu__wrapper:first-child {
+    align-items: flex-start;
+  }  
+
+  .coffe-and-tea-menu {
+    width: 438px;
+    height: 520px;    
+  }
+
+  .deserts {
+    align-self: flex-end;
   }
 
 
