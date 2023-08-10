@@ -1500,10 +1500,31 @@ input::-webkit-inner-spin-button {
   .deserts {
     align-self: flex-end;
   }
-
-
-
   /* Section Coffee Shop end*/
+
+
+  /* Section Contacts start*/ 
+
+  .contacts__wrapper {
+    display: flex;
+    flex-direction: column;   
+  }
+  
+  .contacts-info {
+    width: 726px;
+    height: 380px;
+    margin-bottom: 100px;   
+  }
+
+  .contacts-map {
+    width: 696px;
+    height: 414px;    
+  } 
+
+  /* Section Contacts end*/
+
+  
+
 
 }
 
