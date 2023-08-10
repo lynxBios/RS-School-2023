@@ -1227,8 +1227,7 @@ input::-webkit-inner-spin-button {
   width: 229px;
   height: 40px;
   flex-shrink: 0;
-  margin-right: 1022px;
-  
+  margin-right: 1022px;  
 }
 
 .schedule__workdays {
@@ -1562,19 +1561,108 @@ input::-webkit-inner-spin-button {
 
   /* Section Library-card end*/
 
-  
+
   /* Footer start*/
 
+  .footer {
+    width: 100%;
+    height: 250px;
+  }
+  
+  .footer__wrapper {
+    background:#0C0C0E;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .frame__6 {
+    width: 100%;
+    height: 90px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    top: 20px;
+  }
 
-  /* Footer end*/
+  .address {
+    margin: 0;
+  }
 
+  .social__media {
+    margin: 0;
+  }
+  
+  .frame__5 {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    padding-left: 18.5px;
+    padding-right: 18.5px;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
 
+  .social__navigation {
+    margin: 0;
+  }
+  
+  .frame__4 {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 19.5px;
+    padding-right: 19.5px;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  .line__3 {
+    width: 97.2%;
+    display: flex;
+    align-self: center;
+    margin-right: 0;
+    margin-top: 30px;
+    margin-bottom: 55px;
+  }
+
+  .footer__rss {
+    width: 100%;
+    height: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:20px ;
+    padding-right: 20px;
+    padding-bottom: 32px;
+  }
+
+  .year {
+    margin: 0;
+  }
+
+  .rss-link {
+    margin: 0;
+  }
+
+  .user-link {
+    margin: 0;
+    height: fit-content;
+  }
+
+/* Footer end*/
 }
 
 
 
 @media screen and (max-width: 1024px) {
+  
+  /* Header start*/
+
   .header__wrapper {
     padding: 20px;
   }
@@ -1634,7 +1722,7 @@ input::-webkit-inner-spin-button {
   
   .header__navigation {
     display: block;
-    transition: .5s all linear;
+    transition: .3s all linear;
     width: 332px;
     height: 570px;
     background-color: #0C0C0E;
@@ -1646,7 +1734,6 @@ input::-webkit-inner-spin-button {
     transform: translateX(100%);
     margin: 0;
   }
-
 
   .header__navigation-active {
     transform: translateX(0);
@@ -1689,7 +1776,28 @@ input::-webkit-inner-spin-button {
 
   .header__nav-close-line:last-child {
     transform: translateY(-50%) rotate(-45deg);
-  }  
+  }
+  /* Header end*/
+  
 }
+
+
+@media screen and (max-width: 768px) {
+  
+  .line__3 {
+    width: 95%;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  
+  .line__3 {
+    width: 95%;
+  }
+
+}
+
+
 
 /*Media end*/
