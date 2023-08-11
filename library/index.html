@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library#1</title>    
+    <title>Library#2</title>    
     <link rel="stylesheet" href="./css/style.css">    
     <link rel="icon" href="./img/svg/favicon.svg">    
 </head>
@@ -31,11 +31,26 @@
                             <a href="#library-card" class="header__link">Library Card</a>
                         </li>                              
                     </ul>
-                </nav>
-    
+                    
+                    <div class="header__ico-burger">
+                        <img src="./img/svg/icon-profile.svg" alt="profile button">
+                    </div>
+
+                    <div class="header__nav-close">
+                        <span class="header__nav-close-line"></span>
+                        <span class="header__nav-close-line"></span>
+                    </div>
+                </nav>   
+                
                 <div class="header__ico">
                     <img src="./img/svg/icon-profile.svg" alt="profile button">
-                </div>                       
+                </div>
+                
+                <div class="header__burger burger">
+                    <span class="burger__line burger__line_first"></span>
+                    <span class="burger__line burger__line_second"></span>
+                    <span class="burger__line burger__line_third"></span>
+                </div>
             </div>
         </header>
     
@@ -53,16 +68,31 @@
         
             <section class="about" id="about">
                 <h2 class="section-title">About</h2>
-                <div class="line"></div>
+                <div class="line__wrapper">
+                    <div class="line"></div>
+                </div>
                 <div class="about__wrapper">                    
                     <span class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </span>
-                    <div class="about layout-3-column">
-                        <div class="images-items">
-                            <img src="./img/image-1.png" alt="image1" class="img-1">
-                            <img src="./img/image-2.png" alt="image2" class="img-2">
-                            <img src="./img/image-3.png" alt="image3" class="img-3">
+                    
+                    <div class="about__carret-wrapper">
+                        <div class="about__carret-left">
+                            <img src="./img/svg/carret-left.svg" alt="carret left">
                         </div>
+    
+                        <div class="about layout-3-column">
+                            <div class="images-items">
+                                <img src="./img/image-1.png" alt="image1" class="img-1">
+                                <img src="./img/image-2.png" alt="image2" class="img-2">
+                                <img src="./img/image-3.png" alt="image3" class="img-3">
+                            </div>
+                        </div>
+    
+                        <div class="about__carret-right">
+                            <img src="./img/svg/carret-right.svg" alt="carret right">
+                        </div>
+                    
                     </div>
+                   
                     <div class="carousel">
                         <div class="area__circle__buttons">
                             <div class="carousel active__button"></div>
@@ -72,14 +102,24 @@
                         </div>                     
                         <div class="area__circle__buttons">                        
                             <div class="carousel inactive__button"></div>                                                
-                        </div>                    
+                        </div>
+                        
+                        <div class="area__circle__buttons_additional">                        
+                            <div class="carousel inactive__button_additional"></div>                                                
+                        </div>
+                        <div class="area__circle__buttons_additional">                        
+                            <div class="carousel inactive__button_additional"></div>                                                
+                        </div>
+
                     </div>
                 </div>
             </section>
         
             <section class="favorites" id="favorites">                
                     <h2 class="section-title">Favorites</h2>
-                    <div class="line"></div>
+                    <div class="line__wrapper">
+                        <div class="line"></div>
+                    </div>
                 <div class="favorites__wrapper">    
                     <span class="favorites__subtitle">Pick favorites of season</span>
 
@@ -106,7 +146,7 @@
                         </label>
                     </form>
 
-                    <div class="favorites-items">                            
+                    <div class="favorites__items favorites__wrapper_media">                            
                         <div class="favorites__item-1">
                             <p class="favorites__stuff-picks">Staff Picks</p>
                             <div class="favorites__line-1"></div>
@@ -181,8 +221,10 @@
         
             <section class="coffe-shop" id="coffee-shop">
                 <h2 class="section-title">Coffee shop</h2>
-                <div class="line"></div>
-                <div class="coffe-shop__wrapper">
+                <div class="line__wrapper">
+                    <div class="line"></div>
+                </div>
+                <div class="coffe-shop__wrapper coffee-shop__wrapper_media">
                     
                     <div class="menu__wrapper-text">
                         <span class="menu__i">I</span><span class="menu__content">n our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation.<br></span
@@ -263,7 +305,9 @@
         
             <section class="contacts" id="contacts">
                 <h2 class="section-title">Our Contacts</h2>
-                <div class="line"></div>
+                <div class="line__wrapper">
+                    <div class="line"></div>
+                </div>
                 <div class="contacts__wrapper">
                     <div class="contacts-info">
                         <h5 class="column__title">For all Library inquiries:</h5>
@@ -292,7 +336,9 @@
         
             <section class="library-card" id="library-card">
                 <h2 class="section-title">Digital Library Cards</h2>
-                <div class="line"></div>
+                <div class="line__wrapper">
+                    <div class="line"></div>
+                </div>
                 <div class="library-card__wrapper">
                     
                     <div class="layout-2-column">
@@ -374,6 +420,7 @@
     </div>
 
 <script src="./scripts/index.js"></script>
+<script src="./scripts/main.js"></script>
 
 </body>
 </html>
