@@ -168,7 +168,7 @@ h6 {
 
 .header__item a:hover { 
   color: #BB945F;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 .header__item a {
