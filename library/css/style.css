@@ -184,9 +184,6 @@ h6 {
   height: 28px;
 }
 
-.header__ico-burger {
-  display: none;
-}
 /*Header styles end*/
 
 
@@ -1673,16 +1670,9 @@ input::-webkit-inner-spin-button {
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
+    z-index: 11;
   }
 
-  .header__ico-burger {
-    top: 31px;
-    left: 212px;
-    margin-right: 53px;
-    display: block;
-    position: absolute;
-  }
- 
   .header__burger {
     display: block;
     width: 45px;
