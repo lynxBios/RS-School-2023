@@ -121,7 +121,6 @@ h6 {
 
 /*Header styles start*/
 
-
 .header__wrapper {    
   width: 100%;
   height: 90px;
@@ -291,6 +290,14 @@ h6 {
   display: none;
 }
 
+.img-4 {                               /* !!!!!!!!!!!*/
+  display: none;
+}
+
+.img-5 {                               /* !!!!!!!!!!!*/
+  display: none;
+}
+
 .layout-3-column {
   gap: 25px;
   margin-bottom: 40px;
@@ -342,8 +349,8 @@ h6 {
 
 .favorites__wrapper {
   padding-left: 20px;
-  padding-right: 20px;
-  }
+  padding-right: 20px;  
+}
 
 .favorites__subtitle {  
   height: 24px;
@@ -578,8 +585,7 @@ h6 {
   padding-left: 15px;
   padding-bottom: 20px;
   margin-top: 0;
-  position: relative;
-    
+  position: relative;    
 }
 
 .favorites__book-4 {
@@ -589,6 +595,262 @@ h6 {
   bottom: -1px;
   right: -40px;
 }
+
+.visually-hidden {
+  display: none;
+}
+
+.favorites__item-5 {
+  border: 1px solid #000;
+  background: #FFF;
+  width: 550px;
+  height: 555px;
+  flex-shrink: 0;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  position: relative;    
+}
+
+.favorites__book-5 {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  bottom: -1px;
+  right: -40px;
+}
+
+.favorites__item-6 {
+  border: 1px solid #000;
+  background: #FFF;
+  width: 550px;
+  height: 555px;
+  flex-shrink: 0;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  position: relative;    
+}
+
+.favorites__book-6 {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  bottom: -1px;
+  right: -40px;
+}
+
+.favorites__item-7 {
+  border: 1px solid #000;
+  background: #FFF;
+  width: 550px;
+  height: 555px;
+  flex-shrink: 0;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  position: relative;    
+}
+
+.favorites__book-7 {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  bottom: -1px;
+  right: -40px;
+}
+
+.favorites__item-8 {
+  border: 1px solid #000;
+  background: #FFF;
+  width: 550px;
+  height: 555px;
+  flex-shrink: 0;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  position: relative;    
+}
+
+.favorites__book-8 {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  bottom: -1px;
+  right: -40px;
+}
+
+.favorites__item-9 {
+  border: 1px solid #000;
+  background: #FFF;
+  width: 550px;
+  height: 555px;
+  flex-shrink: 0;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  position: relative;    
+}
+
+.favorites__book-9 {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  bottom: -1px;
+  right: -40px;
+}
+
+.favorites__item-10 {
+  border: 1px solid #000;
+  background: #FFF;
+  width: 550px;
+  height: 555px;
+  flex-shrink: 0;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  position: relative;    
+}
+
+.favorites__book-10 {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  bottom: -1px;
+  right: -40px;
+}
+
+.favorites__item-11 {
+  border: 1px solid #000;
+  background: #FFF;
+  width: 550px;
+  height: 555px;
+  flex-shrink: 0;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  position: relative;    
+}
+
+.favorites__book-11 {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  bottom: -1px;
+  right: -40px;
+}
+
+.favorites__item-12 {
+  border: 1px solid #000;
+  background: #FFF;
+  width: 550px;
+  height: 555px;
+  flex-shrink: 0;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  position: relative;    
+}
+
+.favorites__book-12 {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  bottom: -1px;
+  right: -40px;
+}
+
+.favorites__item-13 {
+  border: 1px solid #000;
+  background: #FFF;
+  width: 550px;
+  height: 555px;
+  flex-shrink: 0;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  position: relative;    
+}
+
+.favorites__book-13 {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  bottom: -1px;
+  right: -40px;
+}
+
+.favorites__item-14 {
+  border: 1px solid #000;
+  background: #FFF;
+  width: 550px;
+  height: 555px;
+  flex-shrink: 0;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  position: relative;    
+}
+
+.favorites__book-14 {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  bottom: -1px;
+  right: -40px;
+}
+
+.favorites__item-15 {
+  border: 1px solid #000;
+  background: #FFF;
+  width: 550px;
+  height: 555px;
+  flex-shrink: 0;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  position: relative;    
+}
+
+.favorites__book-15 {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  bottom: -1px;
+  right: -40px;
+}
+
+.favorites__item-16 {
+  border: 1px solid #000;
+  background: #FFF;
+  width: 550px;
+  height: 555px;
+  flex-shrink: 0;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  position: relative;    
+}
+
+.favorites__book-16 {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  bottom: -1px;
+  right: -40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .buy-button:hover {
   background-color: #BB945F;
