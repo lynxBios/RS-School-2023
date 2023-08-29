@@ -181,6 +181,30 @@ h6 {
 .header__ico {
   width: 28px;
   height: 28px;
+
+  cursor: pointer;
+}
+
+.after_auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+
+  background-color: #fff;
+  border-radius: 50px;
+
+  cursor: pointer;
+}
+
+.letters {
+  color: #BB945F;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */  
 }
 
 .drop_menu_no_auth {
@@ -267,6 +291,155 @@ h6 {
 
   cursor: pointer;
 }
+
+.modal__log_in {
+  width: 250px;
+  height: 262px;  
+  justify-content: center;
+}
+
+.modal__close_btn {
+  position: relative;
+  top: 15px;
+  left: 220px;
+
+  width: 15px;
+  height: 15px; 
+  
+  cursor: pointer;
+}
+
+.modal__close-line {
+  position: absolute;
+  top: 50%;
+
+  display: block;
+  width: 100%;
+  height: 2px;
+
+  background-color: #0C0C0E;  
+}
+
+.modal__close-line:first-child {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.modal__close-line:last-child {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.modal__title {
+  margin-top: 5px;
+  margin-bottom: 20px;
+
+  color: #000;
+  text-align: center;
+  font-family: Forum;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.modal__content_wrapper {
+  margin-top: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 10px;
+  padding: 0;  
+}
+
+.modal_content {  
+  margin-bottom: 10px;
+
+  color: #000;  
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+  letter-spacing: 0.3px;
+}
+
+.email {
+  margin-top: 10px;
+  width: 200px;
+  height: 20px;
+  flex-shrink: 0;
+
+  border: 1px solid #BB945F;
+}
+
+.pswd {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  width: 200px;
+  height: 20px;
+  flex-shrink: 0;
+
+  border: 1px solid #BB945F;  
+}
+
+.modal__submit {
+  width: 75px;
+  height: 30px;
+  flex-shrink: 0;
+  margin-bottom: 10px;
+
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+
+  cursor: pointer;
+}
+
+.modal__last_line {
+  display: flex; 
+}
+
+.item_1 {
+  margin-right: 10px;
+
+  color: #000;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;  
+}
+
+.item_2 {
+  color: #0C0C0E;  
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-decoration-line: underline;
+
+  cursor: pointer;
+}
+
+
+
+/*.login__submit {
+
+  background-color: aqua;
+}*/
 
 /*Header styles end*/
 
@@ -490,16 +663,15 @@ h6 {
 
 .real-radio-btn {
   /* Скрываем реальную радио кнопку*/
+  position: absolute;
   width: 0;
   height: 0;
-  position: absolute;
   opacity: 0;
   z-index: -1;
 }
 
 /* Рисуем внешний круг радиокнопки*/
 .custom-radio-btn {
-  cursor: pointer;
   position: relative; /* Родительский элемент*/
   display: inline-block; /* Для применения рамок, размеров*/
   width: 17px;
@@ -509,6 +681,7 @@ h6 {
   border-radius: 50%; /* Получение круга*/  
   vertical-align: text-bottom; /* Выравнивание кнопки по центру*/
   margin-right: 20px; /* Отступ между кнопкой и меткой*/
+  cursor: pointer;
 }
 
 /* Рисуем внутренний круг */
@@ -690,7 +863,16 @@ h6 {
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .favorites__item-5 {
@@ -2017,11 +2199,14 @@ input::-webkit-inner-spin-button {
   }
 
   .header__burger {
+    position: relative;
+    
     display: block;
     width: 45px;
-    height: 20px;
-    position: relative;
+    height: 20px;    
     margin-left: 40px;
+
+    cursor: pointer;
   }
   
   .burger__line {
@@ -2090,21 +2275,24 @@ input::-webkit-inner-spin-button {
   }
 
   .header__nav-close {
-    width: 32px;
-    height: 32px;
     position: absolute;
     top: 31px;
     right: 20px;
     z-index: 11;
+
+    width: 32px;
+    height: 32px;    
   }
 
   .header__nav-close-line {
+    position: absolute;
+    top: 50%;
+
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
+
+    background-color: #fff;    
   }
 
   .header__nav-close-line:first-child {
