@@ -139,28 +139,30 @@ h6 {
 }
 
 .header__navigation {
-  width: 585px;
-  height: 50px;
   display: flex;
+  width: 585px;
+  height: 50px;  
   align-items: center;
-  color: #FFF;
+  margin-left: 450px;
+  margin-right: 40px;
+  
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 50px; /* 250% */    
-  margin-left: 450px;
-  margin-right: 40px;   
+  line-height: 50px; /* 250% */
+  color: #FFF;    
 }
 
 .header__list {
-  list-style: none;    
-  cursor: pointer;
-  transition: .5s;
   display: flex;
   justify-content: space-between; 
   width: 585px;
   gap: 30px;
+
+  list-style: none;    
+  cursor: pointer;
+  transition: .5s;  
 }
 
 .header__item {    
@@ -332,7 +334,6 @@ h6 {
   margin-top: 5px;
   margin-bottom: 20px;
 
-  color: #000;
   text-align: center;
   font-family: Forum;
   font-size: 20px;
@@ -341,6 +342,7 @@ h6 {
   line-height: 20px; /* 100% */
   letter-spacing: 0.4px;
   text-transform: uppercase;
+  color: #000;
 }
 
 .modal__content_wrapper {
@@ -354,13 +356,13 @@ h6 {
 .modal_content {  
   margin-bottom: 10px;
 
-  color: #000;  
   font-family: Inter;
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 133.333% */
   letter-spacing: 0.3px;
+  color: #000;
 }
 
 .input_box {
@@ -378,16 +380,16 @@ h6 {
   height: 30px;
   flex-shrink: 0;
   margin-top: 10px;
-  margin-bottom: 10px;
-
-  color: #0C0C0E;
+  margin-bottom: 10px;  
   text-align: center;
+
   font-family: Inter;
   font-size: 10px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1px;
+  color: #0C0C0E;
 
   background-color: #fff;
   border-radius: 2px;
@@ -403,17 +405,16 @@ h6 {
 .item_1 {
   margin-right: 10px;
 
-  color: #000;
   text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
   font-family: Inter;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;  
+  line-height: normal;
+  color: #000;
 }
 
 .item_2 {
-  color: #0C0C0E;  
   font-family: Inter;
   font-size: 10px;
   font-style: normal;
@@ -421,6 +422,7 @@ h6 {
   line-height: normal;
   letter-spacing: 1px;
   text-decoration-line: underline;
+  color: #0C0C0E;
 
   cursor: pointer;
 }
@@ -431,13 +433,205 @@ h6 {
   justify-content: center;
 }
 
+.modal__profile {
+  display: flex;
+  width: 600px;
+  height: 400px;  
+}
 
-/*.login__submit {
+.black_part {
+  width: 170px;
+  height: 400px;
+  padding-top: 139px;  
 
-  background-color: aqua;
-}*/
+  background-color: #0C0C0E;
+}
+
+.box_1 {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  align-items: center;
+  padding: 30px 27px;
+
+  background-color: #fff;
+}
+
+.initials {
+  text-align: center;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  text-transform: capitalize;
+  color: #BB945F;
+}
+
+.box_2 {
+  width: 120px;
+  height: 30px;
+  margin: 0 auto;
+  padding: 5px 15px;
+
+  background-color: #fff;
+}
+
+.jd {
+  text-align: center;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: capitalize;
+  color: #000;
+}
+
+.white_part {
+  padding-left: 20px;
+}
+
+.profile__title {
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 50% */
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.profile__close_btn {
+  position: relative;
+  top: 21px;
+  left: 367px;
+
+  width: 20px;
+  height: 20px; 
+  
+  cursor: pointer;
+}
+
+.visits_info {
+  display: grid;
+  grid-template-columns: 53px 84px 60px;
+  grid-template-rows: 20px 21px 20px;
+  grid-template-areas: 
+    "visites bonuses books"
+    "item1 item2 item3"
+    "num1 num2 num3";
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  justify-items: center;
+  align-items: center;
+  width: 237px;
+  margin-bottom: 20px;
+  
+  background-color: #fff;
+}
+
+.grid_item {  
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  
+  color: #000;  
+}
+
+.grid_num {
+  text-align: center;  
+  
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 200% */
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+  color: #000;
+}
+
+.rented__books {  
+  text-align: start;
+  margin-top: 0;
+  margin-bottom: 30px;  
+
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 80% */
+  color: #0C0C0E;    
+}
+
+.li__books {
+  margin-bottom: 10px;  
+  margin-left: 30px;
+    
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  color: #000; 
+}
+
+.card__number_wrapper {
+  display: flex;
+}
+
+.card__number {
+  text-align: center;
+  margin-top: 25px;
+  margin-right: 15px;
+  
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  color: #0C0C0E;
+}
+
+.profile_number {  
+  text-align: center;
+  margin-top: 25px;
+  margin-right: 15px;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+  color: #BB945F;
+}
+
+.nlo {
+  margin-top: 30px;
+}
+
+
+
+
+
 
 /*Header styles end*/
+
+
 
 
 /*Section Welcome styles start*/
