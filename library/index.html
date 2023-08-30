@@ -77,11 +77,11 @@
 
                 <form method="post" class="email__form">
                     <div class="modal_content">E-mail or readers card
-                        <input class="email" type="email" name="email">
+                        <input class="input_box" type="email" name="email">
                     </div>
 
                     <div class="modal_content">Password
-                        <input class="pswd" type="password" name="password">
+                        <input class="input_box" type="password" name="password">
                     </div>
                                         
                     <div class="login__button">
@@ -97,7 +97,44 @@
         </div>
 
 
-        <div class="modal_register"></div>
+        <div class="modal_register visually-hidden">
+            <div class="modal__close_btn">
+                <span class="modal__close-line"></span>
+                <span class="modal__close-line"></span>
+            </div>
+
+            <div class="modal__title">Register</div>
+
+            <div class="modal__content_wrapper">                
+
+                <form method="post" class="email__form">
+                    <div class="modal_content">First name
+                        <input class="input_box" type="text" name="text">
+                    </div>
+
+                    <div class="modal_content">Last name
+                        <input class="input_box" type="text" name="text">
+                    </div>
+
+                    <div class="modal_content">E-mail
+                        <input class="input_box" type="email" name="email">
+                    </div>
+
+                    <div class="modal_content">Password
+                        <input class="input_box" type="password" name="password">
+                    </div>
+                                        
+                    <div class="login__button">
+                        <button class="modal__submit" type="submit">Sign Up</button>
+                    </div>
+                </form>
+
+                <div class="modal__last_line">
+                    <span class="item_1">Already have an account?</span>
+                    <span class="item_2">Login</span>
+                </div>
+            </div>
+        </div>
 
 
         <div class="drop_menu_with_auth visually-hidden">
