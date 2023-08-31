@@ -195,11 +195,7 @@
                     </div>
                 </div>
             </div>
-
-            
-
-        </div>
-    
+        </div>    
         
         <main class="main">
             <section class="welcome">
@@ -706,16 +702,16 @@
                                 <div class="card__bg">
                                     
                                     <p class="card__title">Brooklyn Public Library</p>
-                                    <form method="post" class="card__form">
+                                    <form class="card__form" method="post" >
                                         <div class="username">
-                                            <input type="text" name="name" placeholder="Reader's name" class="placeholder">
+                                            <input class="placeholder" type="text" name="name" placeholder="Reader's name">
                                         </div>
                                         <div class="usernumber">
-                                            <input type="number" name="number" placeholder="Card number" class="placeholder">
+                                            <input class="placeholder" type="number" name="number" placeholder="Card number">
                                         </div>
                                         
                                         <div class="check-card__button">
-                                            <button type="submit" class="check-card__submit">Check the card</button>
+                                            <button class="check-card__submit" type="submit">Check the card</button>
                                         </div>
                                     </form>
                                 </div>
@@ -731,6 +727,51 @@
                         </div>
     
                     </div>
+                </div>
+
+                <div class="modal__buy_card visually-hidden">
+                    <div class="buy__card_title_wrapper">
+                        <div class="buy_card__title">Buy a library card</div>
+                        <div class="buy_card__close_btn">
+                            <span class="buy_card__close-line"></span>
+                            <span class="buy_card__close-line"></span>
+                        </div>                        
+                    </div>
+
+                    <div class="buy_card_content_wrapper">
+                        <div class="buy_card_content">
+                            <form class="buy_card__form" method="post" >
+                                <label class="bank_card_info">Bank card number
+                                    <input class="bank_num" type="number" name="number">
+                                </label>
+                                <label class="bank_card_info">Expiration code<br>
+                                    <input class="exp_num exp_1" type="number" name="number"><input class="exp_num" type="number" name="number">
+                                </label><br>
+                                <label class="bank_card_info">CVC<br>
+                                    <input class="exp_num exp_3" type="number" name="number">
+                                </label><br>
+                                <label class="bank_card_info">Cardholder name
+                                    <input class="bank_num" type="text" name="number">
+                                </label>
+                                <label class="bank_card_info">Postal code
+                                    <input class="bank_num" type="number" name="number">
+                                </label>
+                                <label class="bank_card_info">City / Town
+                                    <input class="bank_num" type="text" name="number">
+                                </label>
+                                
+                                <div class="buy-card__button">
+                                    <button class="buy-card__submit" type="submit">Buy</button>
+                                </div>
+
+                                <div class="card__price">$ 25.00</div>                                
+                            </form>
+                        </div>
+    
+                        <div class="buy_card_text">If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.</div>
+                        
+                    </div>       
+                    
                 </div>
             </section>
         </main>
