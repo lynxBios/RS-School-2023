@@ -624,14 +624,7 @@ h6 {
   margin-top: 30px;
 }
 
-
-
-
-
-
 /*Header styles end*/
-
-
 
 
 /*Section Welcome styles start*/
@@ -716,8 +709,6 @@ h6 {
   background: #0C0C0E;
   margin-bottom: 40px;  
 }
-
-
 
 
 /*Section About styles start*/
@@ -1761,16 +1752,16 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none; 
 }
 
-.placeholder {
-  color: #8E8E8E;
-  border: 0;
+.placeholder {  
   font-family: Forum;
   font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: 50px; /* 166.667% */
   letter-spacing: 0.6px;
+  color: #8E8E8E;
 
+  border: 0;
 }
 
 .check-card__button {
@@ -2076,13 +2067,71 @@ input::-webkit-inner-spin-button {
   color: #8E8E8E;  
 }
 
+.title__auth {
+  margin-left: 175px;  
+}
 
+.placeholder__auth {  
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 166.667% */
+  letter-spacing: 0.6px;
+  color: #BB945F;
 
+  border: 0;
+}
+input::-webkit-input-placeholder { color: #BB945F; }
+input::-moz-placeholder { color: #BB945F; }
 
+.visits__info_auth {
+  display: grid;
+  grid-template-columns: 53px 84px 60px;
+  grid-template-rows: 20px 21px 20px;
+  grid-template-areas: 
+    "visites bonuses books"
+    "item1 item2 item3"
+    "num1 num2 num3";
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  justify-items: center;
+  align-items: center;
+  width: 169px;
+  margin-top: -5px;
+  margin-left: 160px;
+  
+  background-color: #fff;
+}
 
+.grid_item_auth {   
+  text-align: center;
 
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 200% */
+  letter-spacing: 0.2px;
+  text-transform: capitalize;  
+  color: #000;  
+}
+
+.grid_num {
+  text-align: center;  
+  
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 200% */
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+  color: #000;
+}
 
 /*Section Library Card styles end*/
+
 
 /*Footer styles start*/
 .footer__wrapper {
