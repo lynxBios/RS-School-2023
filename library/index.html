@@ -8,7 +8,8 @@
     <link rel="icon" href="./img/svg/favicon.svg">    
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper">       
+
         <header class="header">
             <div class="wrapper header__wrapper">
                 <h1 class="header__title">Brooklyn Public Library</h1>
@@ -38,13 +39,34 @@
                     </div>
                 </nav>   
                 
-                <div class="header__ico">
-                    <img src="./img/svg/icon-profile.svg" alt="profile button">
-                </div>
+                <div class="header__ico-wrapper">
+                    <div class="header__ico">
+                        <img src="./img/svg/icon-profile.svg" alt="profile button">
+                    </div>
 
-                <div class="after_auth visually-hidden">
-                    <div class="letters">JD</div>
+                    <div class="drop_menu_no_auth">
+                        <span class="profile">Profile</span>
+                        <br>
+                        <div class="drop_menu__line"></div>                         
+                        <span class="log_in">Log In</span>
+                        <br>
+                        <div class="register">Register</div>
+                    </div>
+
+                    <div class="ico__after_auth">
+                        <div class="letters__jd">JD</div>
+                    </div>
+
+                    <div class="drop_menu_with_auth">
+                        <span class="profile">Profile</span>
+                        <br>
+                        <div class="drop_menu__line"></div>                         
+                        <span class="my_profile">My profile</span>
+                        <br>
+                        <div class="log_out">Log Out</div>
+                    </div>
                 </div>
+                
                 
                 <div class="header__burger burger">
                     <span class="burger__line burger__line_first"></span>
@@ -55,99 +77,97 @@
             </div>
         </header>
 
-        <div class="drop_menu_no_auth visually-hidden">
-            <span class="profile">Profile</span>
-            <br>
-            <div class="drop_menu__line"></div>                         
-            <span class="log_in">Log In</span>
-            <br>
-            <div class="register">Register</div>
-        </div>
+        
 
-        <div class="modal__log_in visually-hidden">
+        <div class="modal__log_in-wrapper">
+            <div class="modal__log_in-overlay"></div>
+            <div class="modal__log_in">
             
-            <div class="modal__close_btn">
-                <span class="modal__close-line"></span>
-                <span class="modal__close-line"></span>
-            </div>
-
-            <div class="modal__title">login</div>
-
-            <div class="modal__content_wrapper">                
-
-                <form method="post" class="email__form">
-                    <div class="modal_content">E-mail or readers card
-                        <input class="input_box" type="email" name="email">
+                <div class="modal__close_btn">
+                    <span class="modal__close-line"></span>
+                    <span class="modal__close-line"></span>
+                </div>
+    
+                <div class="modal__title">login</div>
+    
+                <div class="modal__content_wrapper">                
+    
+                    <form method="post" class="email__form">
+                        <div class="modal_content">E-mail or readers card
+                            <input class="input_box" type="email" name="email">
+                        </div>
+    
+                        <div class="modal_content">Password
+                            <input class="input_box" type="password" name="password">
+                        </div>
+                                            
+                        <div class="login__button">
+                            <button class="modal__submit login__btn" type="submit">Log In</button>
+                        </div>
+                    </form>
+    
+                    <div class="modal__last_line">
+                        <span class="item_1">Don't have an account?</span>
+                        <span class="item_2">Register</span>
                     </div>
-
-                    <div class="modal_content">Password
-                        <input class="input_box" type="password" name="password">
-                    </div>
-                                        
-                    <div class="login__button">
-                        <button class="modal__submit" type="submit">Log In</button>
-                    </div>
-                </form>
-
-                <div class="modal__last_line">
-                    <span class="item_1">Don't have an account?</span>
-                    <span class="item_2">Register</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="modal_register visually-hidden">
-            <div class="modal__close_btn">
-                <span class="modal__close-line"></span>
-                <span class="modal__close-line"></span>
-            </div>
 
-            <div class="modal__title">Register</div>
+        <div class="modal__register-wrapper">
+            <div class="modal__register-overlay"></div>
+            <div class="modal_register">
 
-            <div class="modal__content_wrapper">                
-
-                <form method="post" class="email__form">
-                    <div class="modal_content">First name
-                        <input class="input_box" type="text" name="text">
+                <div class="modal__close_btn close_register_btn">
+                    <span class="modal__close-line"></span>
+                    <span class="modal__close-line"></span>
+                </div>
+    
+                <div class="modal__title">Register</div>
+    
+                <div class="modal__content_wrapper">                
+    
+                    <form method="post" class="email__form">
+                        <div class="modal_content">First name
+                            <input class="input_box" type="text" name="text">
+                        </div>
+    
+                        <div class="modal_content">Last name
+                            <input class="input_box" type="text" name="text">
+                        </div>
+    
+                        <div class="modal_content">E-mail
+                            <input class="input_box" type="email" name="email">
+                        </div>
+    
+                        <div class="modal_content">Password
+                            <input class="input_box" type="password" name="password">
+                        </div>
+                                            
+                        <div class="login__button">
+                            <button class="modal__submit register__btn" type="submit">Sign Up</button>
+                        </div>
+                    </form>
+    
+                    <div class="modal__last_line">
+                        <span class="item_1">Already have an account?</span>
+                        <span class="item_2">Login</span>
                     </div>
-
-                    <div class="modal_content">Last name
-                        <input class="input_box" type="text" name="text">
-                    </div>
-
-                    <div class="modal_content">E-mail
-                        <input class="input_box" type="email" name="email">
-                    </div>
-
-                    <div class="modal_content">Password
-                        <input class="input_box" type="password" name="password">
-                    </div>
-                                        
-                    <div class="login__button">
-                        <button class="modal__submit" type="submit">Sign Up</button>
-                    </div>
-                </form>
-
-                <div class="modal__last_line">
-                    <span class="item_1">Already have an account?</span>
-                    <span class="item_2">Login</span>
                 </div>
             </div>
         </div>
 
 
-        <div class="drop_menu_with_auth visually-hidden">
-            <span class="profile">Profile</span>
-            <br>
-            <div class="drop_menu__line"></div>                         
-            <span class="my_profile">My profile</span>
-            <br>
-            <div class="log_out">Log Out</div>
-        </div>
+
+        
 
 
-        <div class="modal__profile visually-hidden">
+        
+
+
+        <div class="modal__profile hidden">
             <div class="black_part">
                 <div class="box_1">
                     <div class="initials">JD</div>
@@ -217,48 +237,52 @@
                 <div class="about__wrapper">                    
                     <span class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </span>
                     
-                    <div class="about__carret-wrapper">
-                        <div class="about__carret-left">
-                            <img src="./img/svg/carret-left.svg" alt="carret left">
-                        </div>
+                    <div class="carousel">
+                        <div class="about__carret-wrapper">
+                            <button class="about__carret-left">
+                                <img src="./img/svg/carret-left.svg" alt="prev img">
+                            </button>
+        
+                            <div class="about">
+                                <div class="gallery">
+                                    <ul>
+                                        <li><img class="img-1" src="./img/image-1.png" alt="image1"></li>
+                                        <li><img class="img-2" src="./img/image-2.png" alt="image2"></li>
+                                        <li><img class="img-3" src="./img/image-3.png" alt="image3"></li>
     
-                        <div class="about layout-3-column">
-                            <div class="images-items">
-                                <img src="./img/image-1.png" alt="image1" class="img-1">
-                                <img src="./img/image-2.png" alt="image2" class="img-2">
-                                <img src="./img/image-3.png" alt="image3" class="img-3">
-                                
-                                <img src="./img/image-4.png" alt="image3" class="img-4">
-                                <img src="./img/image-5.png" alt="image3" class="img-5">
+                                        <li><img class="img-4" src="./img/image-4.png" alt="image3"></li>
+                                        <li><img class="img-5" src="./img/image-5.png" alt="image3"></li>
+                                    </ul>
+                                </div>
+                            </div>
+        
+                            <button class="about__carret-right">
+                                <img src="./img/svg/carret-right.svg" alt="next img">
+                            </button>                        
+                        </div>
+                    </div>
 
+                    <div class="pagination__wrapper">
+                        <div class="pagination">
+                            <div class="area__circle__buttons">
+                                <div class="active__button"></div>
+                            </div>
+                            <div class="area__circle__buttons">                        
+                                <div class="inactive__button"></div>                        
+                            </div>                     
+                            <div class="area__circle__buttons">                        
+                                <div class="inactive__button"></div>                                                
+                            </div>
+                            
+                            <div class="area__circle__buttons_additional">                        
+                                <div class="inactive__button_additional"></div>                                                
+                            </div>
+                            <div class="area__circle__buttons_additional">                        
+                                <div class="inactive__button_additional"></div>                                                
                             </div>
                         </div>
-    
-                        <div class="about__carret-right">
-                            <img src="./img/svg/carret-right.svg" alt="carret right">
-                        </div>
+                    </div>              
                     
-                    </div>
-                   
-                    <div class="carousel">
-                        <div class="area__circle__buttons">
-                            <div class="carousel active__button"></div>
-                        </div>
-                        <div class="area__circle__buttons">                        
-                            <div class="carousel inactive__button"></div>                        
-                        </div>                     
-                        <div class="area__circle__buttons">                        
-                            <div class="carousel inactive__button"></div>                                                
-                        </div>
-                        
-                        <div class="area__circle__buttons_additional">                        
-                            <div class="carousel inactive__button_additional"></div>                                                
-                        </div>
-                        <div class="area__circle__buttons_additional">                        
-                            <div class="carousel inactive__button_additional"></div>                                                
-                        </div>
-
-                    </div>
                 </div>
             </section>
         
@@ -729,7 +753,7 @@
                     </div>
                 </div>
 
-                <div class="modal__buy_card visually-hidden">
+                <div class="modal__buy_card hidden">
                     <div class="buy__card_title_wrapper">
                         <div class="buy_card__title">Buy a library card</div>
                         <div class="buy_card__close_btn">
@@ -775,7 +799,7 @@
                 </div>
             </section>
 
-            <section class="library-card after__auth visually-hidden" id="library-card">
+            <section class="library-card after__auth hidden" id="library-card">
                 <h2 class="section-title">Digital Library Cards</h2>
                 <div class="line__wrapper">
                     <div class="line"></div>
