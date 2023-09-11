@@ -606,7 +606,7 @@ h6 {
 .modal__profile-overlay {
   position: absolute; /* Абсолютное позиционирование */
   left: 0; right: 0; top: 0; bottom: 0; /* Занимает всё пространство */
-  z-index: 1;
+  z-index: 3;
 
   
   
@@ -616,7 +616,7 @@ h6 {
 .modal__profile {
   position: absolute;
   left: 0; right: 0; /* Нужно для выравнивания */
-  z-index: 1;
+  z-index: 3;
 
   display: flex;
   

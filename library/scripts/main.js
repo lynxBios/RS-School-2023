@@ -207,6 +207,7 @@
 
 // Register validation handler
 function validation(form) {
+    
 
     function removeError(input) {
         const formControl = input.parentNode;
@@ -237,9 +238,9 @@ function validation(form) {
         removeError(input);
 
         if (input.dataset.minLength) {
-            if (input.value == "") {
+            if (input.value < 8) {
                 console.log('input is empty');
-                createError(input, 'This field is required');
+                createError(input, 'Minimal length is 8 symbols');
                 result = false;
             }
         }
@@ -260,10 +261,31 @@ function validation(form) {
 }
 
 document.getElementById('add-form').addEventListener('submit', function(event) {
-    event.preventDefault();    
+    event.preventDefault();
+    const registerWindow = document.querySelector('.modal__register-wrapper');    
+    const registerSubmit = document.querySelector('.register__btn');
+    const headerIco= document.querySelector('.header__ico');
+    const profileIco= document.querySelector('.ico__after_auth');
+    
+    
 
     if (validation(this) === true) {
-        alert('Form is valid!');
+        //alert('Form is valid!');
+
+        registerSubmit.addEventListener('click', () => {
+            registerWindow.classList.remove('modal__register-wrapper_active');            
+        });
+
+        
+        headerIco.classList.add('header__ico_no_active');
+        profileIco.classList.add('ico__after_auth_active');
+
+
+
+
+        
+
+       
 
         // сгенерировать cardNumber
         // сменить иконку профиля
@@ -310,4 +332,4 @@ carousel.querySelector('.next').onclick = function() {
   list.style.marginLeft = position + 'px';
 };
 
-})();
+}());
