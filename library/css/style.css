@@ -202,6 +202,10 @@ h6 {
   cursor: pointer;  
 }
 
+.header__ico_no_active {
+  visibility: hidden;
+}
+
 .drop_menu_no_auth {
   position: absolute;
   top: 28px;
@@ -228,6 +232,15 @@ h6 {
   opacity: 1;
 }
 
+/*.hidden {
+  visibility: hidden;
+}*/
+
+/*.hidden .hystmodal__window {
+  transform: scale(1);
+  opacity: 1;
+}*/
+
 .ico__after_auth {
   position: absolute;
   display: flex;
@@ -243,6 +256,18 @@ h6 {
 
   visibility: hidden;
 }
+
+
+.ico__after_auth_active {
+  visibility: visible;
+}
+
+
+
+
+
+
+
 
 .drop_menu_with_auth {
   position: absolute;
@@ -328,6 +353,19 @@ h6 {
   z-index: 1;
   
   background: rgba(142, 142, 142, 0.9);
+}
+
+.error .input_box {
+  border: 1px solid red; 
+}
+
+.error-label {
+  display: block;  
+  margin: 3px;
+
+  font-family: Inter;
+  font-size: small;
+  color: red;
 }
 
 .modal_register {
@@ -472,7 +510,7 @@ h6 {
   color: #000;
 }
 
-.modal__content_wrapper {
+.modal__content_wrapper {  
   margin-top: 20px;
   margin-left: 25px;
   margin-right: 25px;
@@ -554,10 +592,39 @@ h6 {
   cursor: pointer;
 }
 
+.modal__profile-wrapper {
+  position: fixed;
+  left: 0; right: 0; top: 0; bottom: 0;  
+  
+  visibility: hidden;
+}
+
+.modal__profile-wrapper_active {
+  visibility: visible;
+}
+
+.modal__profile-overlay {
+  position: absolute; /* Абсолютное позиционирование */
+  left: 0; right: 0; top: 0; bottom: 0; /* Занимает всё пространство */
+  z-index: 1;
+
+  
+  
+  background: rgba(142, 142, 142, 0.9);
+}
+
 .modal__profile {
+  position: absolute;
+  left: 0; right: 0; /* Нужно для выравнивания */
+  z-index: 1;
+
   display: flex;
+  
   width: 600px;
-  height: 400px;  
+  height: 400px;
+  margin: 80px auto 0; /* Выравниваем по центру */
+  
+  background-color: #fff;
 }
 
 .black_part {
@@ -741,8 +808,10 @@ h6 {
   color: #BB945F;
 }
 
-.nlo {
+.copy {
   margin-top: 30px;
+
+  cursor: pointer;
 }
 
 /*Header styles end*/
@@ -760,7 +829,7 @@ h6 {
   background-size: cover;  
 }
 
-.overlay {
+.welcome__overlay {
   position: absolute;
 
   display: flex;
@@ -1045,15 +1114,18 @@ h6 {
 }
   
 .favorites__item-1 {
-  border: 1px solid #000;
-  background: #FFF;
+  position: relative;
+
   width: 550px;
   height: 555px;
   flex-shrink: 0;  
   padding-left: 15px;  
   padding-bottom: 20px;
   margin-right: 260px;
-  position: relative;
+  margin-bottom: 20px;
+  
+  background: #FFF; 
+  border: 1px solid #000;
 }
 
 .favorites__stuff-picks {
@@ -1131,14 +1203,17 @@ h6 {
   }
 
 .favorites__item-2 {
-  border: 1px solid #000;
-  background: #FFF;
+  position: relative;
+
   width: 550px;
   height: 555px;
   flex-shrink: 0;
   padding-left: 15px;
   padding-bottom: 20px;
-  position: relative;
+  margin-bottom: 20px;
+
+  border: 1px solid #000;
+  background: #FFF;
   }
 
 .favorites__book-2 {
@@ -1191,18 +1266,24 @@ h6 {
   right: -40px;
 }
 
-
+.buy-button-4 {
+  position: absolute;
+  bottom: 0px;
+}
 
 .favorites__item-5 {
-  border: 1px solid #000;
-  background: #FFF;
+  position: relative;
+
   width: 550px;
   height: 555px;
   flex-shrink: 0;
+  margin-top: 0;
   padding-left: 15px;
   padding-bottom: 20px;
-  margin-top: 0;
-  position: relative;    
+  
+  background: #FFF;
+  border: 1px solid #000; 
+  visibility: hidden;    
 }
 
 .favorites__book-5 {
@@ -1222,7 +1303,9 @@ h6 {
   padding-left: 15px;
   padding-bottom: 20px;
   margin-top: 0;
-  position: relative;    
+  position: relative;
+  
+  visibility: hidden;
 }
 
 .favorites__book-6 {
@@ -1242,7 +1325,9 @@ h6 {
   padding-left: 15px;
   padding-bottom: 20px;
   margin-top: 0;
-  position: relative;    
+  position: relative;
+  
+  visibility: hidden;
 }
 
 .favorites__book-7 {
@@ -1262,7 +1347,9 @@ h6 {
   padding-left: 15px;
   padding-bottom: 20px;
   margin-top: 0;
-  position: relative;    
+  position: relative;
+  
+  visibility: hidden;
 }
 
 .favorites__book-8 {
@@ -1282,7 +1369,9 @@ h6 {
   padding-left: 15px;
   padding-bottom: 20px;
   margin-top: 0;
-  position: relative;    
+  position: relative;
+  
+  visibility: hidden;
 }
 
 .favorites__book-9 {
@@ -1302,7 +1391,9 @@ h6 {
   padding-left: 15px;
   padding-bottom: 20px;
   margin-top: 0;
-  position: relative;    
+  position: relative;
+  
+  visibility: hidden;
 }
 
 .favorites__book-10 {
@@ -1322,7 +1413,9 @@ h6 {
   padding-left: 15px;
   padding-bottom: 20px;
   margin-top: 0;
-  position: relative;    
+  position: relative;
+  
+  visibility: hidden;
 }
 
 .favorites__book-11 {
@@ -1342,7 +1435,9 @@ h6 {
   padding-left: 15px;
   padding-bottom: 20px;
   margin-top: 0;
-  position: relative;    
+  position: relative; 
+  
+  visibility: hidden;
 }
 
 .favorites__book-12 {
@@ -1362,7 +1457,9 @@ h6 {
   padding-left: 15px;
   padding-bottom: 20px;
   margin-top: 0;
-  position: relative;    
+  position: relative;  
+  
+  visibility: hidden;
 }
 
 .favorites__book-13 {
@@ -1382,7 +1479,9 @@ h6 {
   padding-left: 15px;
   padding-bottom: 20px;
   margin-top: 0;
-  position: relative;    
+  position: relative; 
+  
+  visibility: hidden;
 }
 
 .favorites__book-14 {
@@ -1402,7 +1501,9 @@ h6 {
   padding-left: 15px;
   padding-bottom: 20px;
   margin-top: 0;
-  position: relative;    
+  position: relative;
+
+  visibility: hidden;    
 }
 
 .favorites__book-15 {
@@ -1422,7 +1523,9 @@ h6 {
   padding-left: 15px;
   padding-bottom: 20px;
   margin-top: 0;
-  position: relative;    
+  position: relative;
+
+  visibility: hidden;
 }
 
 .favorites__book-16 {
@@ -2030,15 +2133,38 @@ input::-webkit-inner-spin-button {
   transition: 0.5s;
 }
 
+/*.overlay-wrapper {
+  position: fixed;
+  left: 0; right: 0; top: 0; bottom: 0;
+}*/
+
+.favorite__items-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+
+  background: rgba(142, 142, 142, 0.9);
+  visibility: hidden;
+}
+
 .modal__buy_card {
+  left: 0;
+  top: 0;
+  
   display: block;
-  width: 650px;
+  width: 640px;
   height: 540px;
+  margin: 80px auto 0;
+
+  background-color: #fff;
 }
 
 .buy__card_title_wrapper {
   display: inline-flex;
-  width: 650px;
+  width: 640px;
   height: 60px;
   flex-shrink: 0;
   margin-bottom: 30px;
@@ -2066,6 +2192,7 @@ input::-webkit-inner-spin-button {
 .buy_card__close_btn {
   position: relative;
   top: 23px;
+  right: 20px;
   
   width: 20px;
   height: 20px;
@@ -2093,7 +2220,8 @@ input::-webkit-inner-spin-button {
 }
 
 .buy_card_content_wrapper {
-  display: flex;  
+  display: flex;
+    
 }
 
 .buy_card_content {
