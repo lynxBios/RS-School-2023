@@ -1,5 +1,6 @@
 'use strict';
 
+
 // Burger handler
 (function burgerHandler() {
     const burgerItem = document.querySelector('.burger');
@@ -134,6 +135,8 @@
     });
 }());
 
+
+
 // My profile/Log out handler
 (function callProfilelogoutWindow() {
     const myProfile = document.querySelector('.my_profile');
@@ -165,7 +168,6 @@
     });
 }());
 
-
 // Call My profile window from Library card section handler
 (function callProfileWindow() {
     const myProfile = document.querySelector('.profile__auth');
@@ -186,6 +188,13 @@
     });
     
 }());
+
+
+
+
+
+
+
 
 
 
@@ -272,7 +281,7 @@ document.getElementById('add-form').addEventListener('submit', function(event) {
         libraryCardBeforeAuth.classList.add('lib-card__before_auth_no_active');
         libraryCardAuthorised.classList.add('lib-card__after_auth_active');
             
-                
+           
 
         // сгенерировать cardNumber
         
@@ -281,6 +290,9 @@ document.getElementById('add-form').addEventListener('submit', function(event) {
         
     }    
 });
+
+
+
 
 
 
@@ -308,8 +320,6 @@ document.getElementById('add-form').addEventListener('submit', function(event) {
 
 
 
-
-
 // logout handler
 (function logoutHandler() {
     const logOut = document.querySelector('.log_out');
@@ -327,7 +337,6 @@ document.getElementById('add-form').addEventListener('submit', function(event) {
         libraryCardAuthorised.classList.remove('lib-card__after_auth_active');
     })
 })
-
 
 
 

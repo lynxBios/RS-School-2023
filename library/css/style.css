@@ -1895,10 +1895,15 @@ h6 {
   padding: 0 20px 40px;
 }
 
+
+
 .lib-card__before_auth_no_active {
   position: absolute;
   visibility: hidden;
 }
+
+
+
 
 .lib-card__after_auth {
   max-width: 100%;
@@ -1906,11 +1911,18 @@ h6 {
   visibility: hidden;
 }
 
+
+
+
+
+
 .lib-card__after_auth_active {
   background-color: #fff;
-    
+
   visibility: visible;
 }
+
+
 
 .layout-2-column {
   display: grid;
