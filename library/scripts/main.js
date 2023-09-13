@@ -26,7 +26,6 @@
     };
 }());
 
-
 // profile ico no auth handler
 (function callLoginRegisterMenu() {
     const headerIco= document.querySelector('.header__ico');
@@ -52,7 +51,6 @@
     });
 }());
 
-
 // profile ico with auth handler
 (function callProfileLogoutMenu() {
     const profileIco= document.querySelector('.ico__after_auth');
@@ -73,7 +71,6 @@
         dropMenuWithAuth.classList.remove('drop_menu_with_auth_active');
     });   
 }());
-
 
 // Login/Register switch handler
 (function callLoginRegisterWindow() {
@@ -132,8 +129,6 @@
         registerWindow.classList.remove('modal__register-wrapper_active');
     });
 }());
-
-
 
 // My profile/Log out handler
 (function callProfilelogoutWindow() {
@@ -243,16 +238,13 @@ function validation(form) {
                 createError(input, 'This field is required');
                 result = false;
             }
-        }
-        
-        
+        }        
     }
 
     return result;
-
 }
 
-document.getElementById('add-form').addEventListener('submit', function(event) {
+document.getElementById('add-form-reg').addEventListener('submit', function(event) {
     event.preventDefault();
     const registerWindow = document.querySelector('.modal__register-wrapper');    
     const registerSubmit = document.querySelector('.register__btn');
@@ -265,6 +257,45 @@ document.getElementById('add-form').addEventListener('submit', function(event) {
 
     registerSubmit.addEventListener('click', () => {
         registerWindow.classList.remove('modal__register-wrapper_active');
+        switchLibraryCardSection()            
+    });    
+    
+
+    if (validation(this) === true) {
+        //alert('Form is valid!');        
+        
+        // сменить иконку профиля
+        headerIco.classList.add('header__ico_no_active');
+        profileIco.classList.add('ico__after_auth_active');
+
+        libraryCardBeforeAuth.classList.add('lib-card__before_auth_no_active');
+        libraryCardAuthorised.classList.add('lib-card__after_auth_active');
+            
+           
+
+        // сгенерировать cardNumber
+        
+        // отправить данные в localStorage
+        // сменить инициалы в иконке профиля
+        
+    }    
+});
+
+
+// login validation handler
+document.getElementById('add-form-login').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const loginWindow = document.querySelector('.modal__log_in-wrapper');    
+    const loginSubmit = document.querySelector('.login__btn');
+    const headerIco = document.querySelector('.header__ico');
+    const profileIco = document.querySelector('.ico__after_auth');
+
+    const libraryCardBeforeAuth = document.querySelector('.lib-card__before_auth');
+    const libraryCardAuthorised = document.querySelector('.lib-card__after_auth');
+    
+
+    loginSubmit.addEventListener('click', () => {
+        loginWindow.classList.remove('modal__log_in-wrapper_active');
         switchLibraryCardSection()            
     });    
     
