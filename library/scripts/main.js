@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 (function burgerHandler() {
     const burgerItem = document.querySelector('.burger');
     const menu = document.querySelector('.header__navigation');
