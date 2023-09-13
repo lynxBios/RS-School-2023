@@ -263,12 +263,6 @@ h6 {
 }
 
 
-
-
-
-
-
-
 .drop_menu_with_auth {
   position: absolute;
   top: 28px;
@@ -593,7 +587,7 @@ h6 {
 }
 
 .modal__profile-wrapper {
-  position: fixed;
+  position: absolute;
   left: 0; right: 0; top: 0; bottom: 0;  
   
   visibility: hidden;
@@ -1897,7 +1891,25 @@ h6 {
 /*Section Library Card styles start*/
 
 .library-card__wrapper {
+  position: relative;
   padding: 0 20px 40px;
+}
+
+.lib-card__before_auth_no_active {
+  position: absolute;
+  visibility: hidden;
+}
+
+.lib-card__after_auth {
+  max-width: 100%;
+  
+  visibility: hidden;
+}
+
+.lib-card__after_auth_active {
+  background-color: #fff;
+    
+  visibility: visible;
 }
 
 .layout-2-column {

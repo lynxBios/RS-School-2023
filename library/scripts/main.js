@@ -1,5 +1,6 @@
-// Burger handler
+'use strict';
 
+// Burger handler
 (function burgerHandler() {
     const burgerItem = document.querySelector('.burger');
     const menu = document.querySelector('.header__navigation');
@@ -28,7 +29,6 @@
 
 
 // profile ico no auth handler
-
 (function callLoginRegisterMenu() {
     const headerIco= document.querySelector('.header__ico');
     const dropMenuNoAuth = document.querySelector('.drop_menu_no_auth');
@@ -55,7 +55,6 @@
 
 
 // profile ico with auth handler
-
 (function callProfileLogoutMenu() {
     const profileIco= document.querySelector('.ico__after_auth');
     const dropMenuWithAuth = document.querySelector('.drop_menu_with_auth');
@@ -136,7 +135,6 @@
 }());
 
 // My profile/Log out handler
-
 (function callProfilelogoutWindow() {
     const myProfile = document.querySelector('.my_profile');
     const profileWindow = document.querySelector('.modal__profile-wrapper');
@@ -169,7 +167,6 @@
 
 
 // Call My profile window from Library card section handler
-
 (function callProfileWindow() {
     const myProfile = document.querySelector('.profile__auth');
     const profileWindow = document.querySelector('.modal__profile-wrapper');
@@ -191,19 +188,7 @@
 }());
 
 
-// login handler
-(function loginHandler() {
-    const icoBeforeAuth = document.querySelector('.header__ico');
-    const icoAuthorised = document.querySelector('.ico__after_auth');
-    const loginButton = document.querySelector('.login__btn');
 
-
-    //that's not working
-    loginButton.addEventListener('click', () => {
-        icoBeforeAuth.classList.add('header__ico_no_active');
-        icoAuthorised.classList.add('ico__after_auth_active');
-    });
-}());
 
 // Register validation handler
 function validation(form) {
@@ -264,37 +249,88 @@ document.getElementById('add-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const registerWindow = document.querySelector('.modal__register-wrapper');    
     const registerSubmit = document.querySelector('.register__btn');
-    const headerIco= document.querySelector('.header__ico');
-    const profileIco= document.querySelector('.ico__after_auth');
+    const headerIco = document.querySelector('.header__ico');
+    const profileIco = document.querySelector('.ico__after_auth');
+
+    const libraryCardBeforeAuth = document.querySelector('.lib-card__before_auth');
+    const libraryCardAuthorised = document.querySelector('.lib-card__after_auth');
     
+
+    registerSubmit.addEventListener('click', () => {
+        registerWindow.classList.remove('modal__register-wrapper_active');
+        switchLibraryCardSection()            
+    });    
     
 
     if (validation(this) === true) {
-        //alert('Form is valid!');
-
-        registerSubmit.addEventListener('click', () => {
-            registerWindow.classList.remove('modal__register-wrapper_active');            
-        });
-
+        //alert('Form is valid!');        
         
+        // сменить иконку профиля
         headerIco.classList.add('header__ico_no_active');
         profileIco.classList.add('ico__after_auth_active');
 
-
-
-
-        
-
-       
+        libraryCardBeforeAuth.classList.add('lib-card__before_auth_no_active');
+        libraryCardAuthorised.classList.add('lib-card__after_auth_active');
+            
+                
 
         // сгенерировать cardNumber
-        // сменить иконку профиля
+        
         // отправить данные в localStorage
         // сменить инициалы в иконке профиля
         
-    }
+    }    
+});
+
+
+
+
+// login handler
+(function loginHandler() {
+    const icoBeforeAuth = document.querySelector('.header__ico');
+    const icoAuthorised = document.querySelector('.ico__after_auth');
+    const loginButton = document.querySelector('.login__btn');
+    const libraryCardBeforeAuth = document.querySelector('.lib-card__before_auth');
+    const libraryCardAuthorised = document.querySelector('.lib-card__after_auth');
+
+
     
+    loginButton.addEventListener('click', () => {
+        icoBeforeAuth.classList.add('header__ico_no_active');
+        icoAuthorised.classList.add('ico__after_auth_active');
+       
+        libraryCardBeforeAuth.classList.add('lib-card__before_auth_no_active');
+        
+        libraryCardAuthorised.classList.add('lib-card__after_auth_active');
+        
+    });
+}());
+
+
+
+
+
+// logout handler
+(function logoutHandler() {
+    const logOut = document.querySelector('.log_out');
+    const dropMenuWithAuth = document.querySelector('.drop_menu_with_auth');
+    const icoAuthorised = document.querySelector('.ico__after_auth');
+    const icoBeforeAuth = document.querySelector('.header__ico');
+    const libraryCardBeforeAuth = document.querySelector('.lib-card__before_auth');
+    const libraryCardAuthorised = document.querySelector('.lib-card__after_auth');
+
+    logOut.addEventListener('click', () => {
+        dropMenuWithAuth.classList.remove('drop_menu_with_auth_active');
+        icoAuthorised.classList.remove('ico__after_auth_active');
+        icoBeforeAuth.classList.remove('header__ico_no_active');
+        libraryCardBeforeAuth.classList.remove('lib-card__before_auth_no_active');
+        libraryCardAuthorised.classList.remove('lib-card__after_auth_active');
+    })
 })
+
+
+
+
 
 
 (function carousel() {
