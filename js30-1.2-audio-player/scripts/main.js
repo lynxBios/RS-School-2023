@@ -54,8 +54,9 @@ function nextSong() {
   }
   loadSong(songs[songIndex]);
   playSong();
+  playBtn.classList.add("playing_non_active");
+  pauseBtn.classList.remove("pause_hidden");
 }
-
 nextBtn.addEventListener("click", nextSong)
 
 function prevSong() {
@@ -65,18 +66,57 @@ function prevSong() {
   }
   loadSong(songs[songIndex]);
   playSong();
+  playBtn.classList.add("playing_non_active");
+  pauseBtn.classList.remove("pause_hidden");
 }
-
 prevBtn.addEventListener("click", prevSong)
 
-function updateProgress(e) {
-  progressValue = (audio.currentTime / audio.duration) * 100;
-  timeline.style.width = `${progressValue}%`;
-  let minutes = Math.floor(audio.currentTime / 60);
-  let seconds = Math.floor(audio.currentTime % 60);
-  if (seconds < 10) {
-    seconds = `0${seconds}`;    
-  }
-}
 
+
+function updateProgress(e) {
+  const {duration, currentTime} = e.srcElement
+  const progressValue = (currentTime / duration) * 100;
+
+  timeline.style.width = `${progressValue}%`;  
+}
 audio.addEventListener("timeupdate", updateProgress);
+
+
+
+function setProgress(e) {
+  const width = this.clientWidth;
+  console.log(width);
+  const clickX = e.offsetX;
+  const duration = audio.duration;
+
+  audio.currentTime = (clickX / width) * duration;
+}
+audioPlayer.addEventListener("click", setProgress);
+
+audio.addEventListener("ended", nextSong);
+
+
+
+function timeHandler() {
+  const currentElement = document.querySelector('.current');
+  const lengthElement = document.querySelector('.length');
+  
+  // Получаем текущую позицию воспроизведения и общую длительность трека
+  const currentTime = audio.currentTime;
+  const duration = audio.duration;
+  
+  // Функция для форматирования времени в формат "минуты:секунды"
+  function formatTime(time) {
+    if (isNaN(time)) {
+      return '0:00';
+    }
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  }
+  
+  // Обновляем текст в элементах с текущим временем и общей длительностью
+  currentElement.textContent = formatTime(currentTime);
+  lengthElement.textContent = formatTime(duration);
+}
+audio.addEventListener('timeupdate', timeHandler);

@@ -12,9 +12,7 @@ const timeline = document.querySelector(".timeline");
 
 console.dir(audio);
 
-audio.addEventListener(
-  "loadeddata",
-  () => {
+audio.addEventListener("loadeddata", () => {
     audioPlayer.querySelector(".time .length").textContent = getTimeCodeFromNum(
       audio.duration
     );
@@ -49,23 +47,7 @@ setInterval(() => {
   );
 }, 500);
 
-//toggle between playing and pausing on button click
-const playBtn = audioPlayer.querySelector(".controls .toggle-play");
-playBtn.addEventListener(
-  "click",
-  () => {
-    if (audio.paused) {
-      playBtn.classList.remove("play");
-      playBtn.classList.add("pause");
-      audio.play();
-    } else {
-      playBtn.classList.remove("pause");
-      playBtn.classList.add("play");
-      audio.pause();
-    }
-  },
-  false
-);
+
 
 audioPlayer.querySelector(".volume-button").addEventListener("click", () => {
   const volumeEl = audioPlayer.querySelector(".volume-container .volume");
@@ -88,7 +70,13 @@ function getTimeCodeFromNum(num) {
   minutes -= hours * 60;
 
   if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
-  return `${String(hours).padStart(2, 0)}:${minutes}:${String(
-    seconds % 60
-  ).padStart(2, 0)}`;
+  return `${String(hours).padStart(2, 0)}:${minutes}:${String(seconds % 60).padStart(2, 0)}`;
 }
+
+const changeTrackTime = (e) => {
+  saveTimer = e.target.value;
+  currentSeconds = saveTimer % 60;
+  currentMinutes = Math.trunc(saveTimer / 60)
+  currentTrackTime.textContent = `${currentMinutes + ':' + (currentSeconds < 10 ? '0' + currentSeconds : currentSeconds)}`;
+}
+
