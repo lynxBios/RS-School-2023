@@ -82,7 +82,6 @@ function updateProgress(e) {
 audio.addEventListener("timeupdate", updateProgress);
 
 
-
 function setProgress(e) {
   const width = this.clientWidth;
   console.log(width);
@@ -94,7 +93,6 @@ function setProgress(e) {
 audioPlayer.addEventListener("click", setProgress);
 
 audio.addEventListener("ended", nextSong);
-
 
 
 function timeHandler() {
