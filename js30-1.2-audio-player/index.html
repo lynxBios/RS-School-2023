@@ -12,7 +12,7 @@
         <main>
             <div class="player_wrapper">
                 <div class="song_picture">
-                    <img src="./assets/img/lemonade.png" alt="">
+                    <img class="song_img" src="./assets/img/covers/cover0.png" alt="lemonade">
                 </div>
                 <div class="song_title">Lemonade</div>
 
@@ -21,9 +21,10 @@
                 <div class="audio-player">
                     <div class="timeline">
                       <div class="progress"></div>
-                    </div>
-                    
+                    </div>                    
                 </div>
+
+                <audio class ="audio" src="./assets/audio/beyonce-don'tHurtYourself.mp3"></audio>
 
 
                 <div class="controls">
@@ -41,7 +42,7 @@
 
                     <div class="name">Music Song</div>
                 
-                    <div class="volume-container">
+                    <div class="volume-container">Volume
                       <div class="volume-button">
                         <div class="volume icono-volumeMedium"></div>
                       </div>
@@ -53,8 +54,8 @@
                 </div>
                 <div class="left-right_controls">
                     <img class="backward" src="./assets/svg/backward.png" alt="backward">
-                    <img class="play-pause" src="./assets/svg/play.png" alt="play">
-                    <img class="play-pause pause" src="./assets/svg/pause.png" alt="pause">
+                    <img class="play-pause playing" src="./assets/svg/play.png" alt="play">
+                    <img class="play-pause pause_hidden" src="./assets/svg/pause.png" alt="pause">
                     <img class="forward" src="./assets/svg/forward.png" alt="forward">
                 </div>
 
@@ -69,5 +70,6 @@
             </div>
         </footer>
     </div>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
