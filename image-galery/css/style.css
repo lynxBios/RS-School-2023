@@ -1,0 +1,183 @@
+@font-face {
+  font-display: swap; 
+  font-family: 'Mooli';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/Mooli-Regular.ttf') format('ttf'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+
+    scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-size: 62.5%;
+  font-family: 'Mooli', sans-serif;
+  color: rgb(190, 188, 188);
+
+  background-color: #1f2120;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;     
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+}
+
+.header {
+  display: flex;
+  max-width: 1920px;
+  height: 10rem;
+  margin-bottom: 2rem;
+  padding: 1rem;  
+}
+
+.header__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  
+  background-color: #1f2120;
+}
+
+.title {
+  margin-left: 20rem;
+  font-size: 4rem;
+  color: rgb(235, 229, 229);
+}
+
+.search_wrapper  input {
+  display: inline-flex;
+  
+  justify-content: space-between;
+  
+  width: 24rem;
+  height: 4rem;
+  margin-right: 2rem;
+  padding-left: 2rem;
+
+  font-size: 1.5rem;
+
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid rgb(14, 209, 147);
+
+  background-color: #ecefee;
+}
+
+.search__btn  {
+  display: inline-block;
+  width: 4.5rem;
+  height: 4rem;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  border-radius: 50%;
+  
+  color: rgb(12, 13, 13);
+  background-color: #f2fbf6;
+
+  cursor: pointer;
+}
+
+.search__btn:hover {
+  background-color: rgb(124, 221, 188);
+  color: rgb(12, 13, 13);
+}
+
+main {
+  flex: 1 0 auto;  
+}
+
+
+
+.images__wrapper {
+  padding: 2rem;
+
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  margin: 0 auto;
+  background-color: #5d605e;
+}
+
+.images__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-gap: 2rem;
+  padding: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+.footer_wrapper { 
+  display: flex;   
+  width: 100%;
+  max-width: 1920px;
+  height: 6rem;  
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 0 3rem;  
+}
+
+.footer {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy_text {
+    color: aliceblue;
+    border-radius: 10%;
+    font-size: 1rem;
+}
+
+.logo {
+    width: 7rem;
+    height: auto;   
+
+    border-radius: 10%;
+}
+
+.github_logo {
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 50%;    
+}
