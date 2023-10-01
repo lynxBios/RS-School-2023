@@ -64,7 +64,7 @@ img {
 }
 
 .title {
-  margin-left: 20rem;
+  margin-left: 5rem;
   font-size: 4rem;
   color: rgb(235, 229, 229);
 }
@@ -137,7 +137,7 @@ img {
 }
 
 .search__btn:hover {
-  background-color: rgb(124, 221, 188);
+  background-color: rgb(33, 240, 171);
   color: rgb(12, 13, 13);
 }
 
@@ -150,9 +150,7 @@ main {
   width: 100%;
   max-width: 1920px;
   height: auto;
-  margin: 0 auto;
-
-  background-color: #5d605e;
+  margin: 0 auto;  
 }
 
 .images img {  
