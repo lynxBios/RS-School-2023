@@ -39,8 +39,7 @@ body {
 
 img {
   width: 100%;
-  height: auto;
-  border-radius: 5%;
+  height: auto;  
 }
 
 .header {
@@ -48,7 +47,7 @@ img {
   max-width: 1920px;
   height: 10rem;
   margin-bottom: 2rem;
-  padding: 1rem;  
+  padding: 2rem 1rem;  
 }
 
 .header__wrapper {
@@ -79,6 +78,7 @@ img {
   height: 4rem;
   margin-right: 2rem;
   padding-left: 2rem;
+  padding-right: 2rem;
 
   font-size: 1.5rem;
 
@@ -145,24 +145,27 @@ main {
   flex: 1 0 auto;  
 }
 
-
-
 .images__wrapper {
   padding: 2rem;
-
   width: 100%;
   max-width: 1920px;
   height: auto;
   margin: 0 auto;
+
   background-color: #5d605e;
 }
 
-.images {
-  width: 80rem;
+.images img {  
+  background-position: center;
+  background-size: cover;
+  border-radius: 3%;
+
+  cursor: pointer;
 }
 
 .images__grid {
   display: grid;
+  flex-wrap: wrap;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(10, 1fr);
   grid-gap: 2rem;
@@ -172,8 +175,15 @@ main {
   height: auto;
 }
 
+.image {
+  width: 38rem;
+  height: 22rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 3%;
 
-
+  cursor: pointer;  
+}
 
 .footer_wrapper { 
   display: flex;   
@@ -202,14 +212,14 @@ main {
     font-size: 1rem;
 }
 
-.logo {
+.logo img {
     width: 7rem;
     height: auto;   
 
     border-radius: 10%;
 }
 
-.github_logo {
+.github_logo img {
     display: flex;
     align-items: center;
     background-color: aliceblue;
