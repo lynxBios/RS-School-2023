@@ -182,9 +182,11 @@ main {
 
 .logo img {
     width: 7rem;
-    height: auto;   
+    height: auto;  
+    
+    background-color: white;
 
-    border-radius: 10%;
+    
 }
 
 .github_logo img {
