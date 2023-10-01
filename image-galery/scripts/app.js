@@ -1,54 +1,46 @@
 'use strict';
 
-const buttonGo = document.querySelector('.search__btn');
-
-const url = 'https://api.unsplash.com/photos/random?query=spring&per_page=30&orientation=landscape&client_id=C7MyJoXDDp8cWtTxLstCqMQxOHYalhZ6iZPm4UV3ZLM';
-const defaultQuery = 'ocean';
-const imagesGrid = document.querySelector('.images__grid');
 const searchWord = document.getElementById('srch_word');
+const buttonGo = document.querySelector('.search__btn');
+const imagesGrid = document.querySelector('.images__grid');
+const defaultQuery = 'random';
 
-async function fetchImages(query = defaultQuery) {
- 
+fetchImages();
+
+async function fetchImages(query = defaultQuery) { 
     const response = await fetch(`https://api.unsplash.com/search/photos?query=${query}&per_page=30&orientation=landscape&client_id=C7MyJoXDDp8cWtTxLstCqMQxOHYalhZ6iZPm4UV3ZLM`);
     const data = await response.json();
-    showImages(data);    
-  
+    showPictures(data);  
 }
 
-function showImages(data) {
-  
+function showPictures(data) {  
   data.results.forEach(image => {
     const picture = document.createElement('img');
     picture.classList.add('img');
     picture.src = image.urls.regular;
+    picture.alt = `${searchWord.value} image`;
     imagesGrid.appendChild(picture);
   });
 }
 
+function clearPictures() {
+  const pictures = imagesGrid.querySelectorAll('img');
+  pictures.forEach(img => img.remove());
+}
 
-
-
-
-
-buttonGo.addEventListener('click', () => {
-  fetchImages();
-});
-
-searchWord.addEventListener('keydown', pressEnter)
-
-function pressEnter(e) {
-  if (e.keyCode === 13) {
-    fetchImages();
+function changePictures() {
+  if (searchWord.value) {    
+    clearPictures();
+    fetchImages(searchWord.value);
   }
 }
 
-fetchImages();
+buttonGo.addEventListener('click', changePictures);
 
-window.addEventListener('DOMContentLoaded', (event) => {
-  const srchWord = document.getElementById('srch_word');
-  if(srchWord) {
-      srchWord.focus();
+searchWord.addEventListener('keydown', pressEnter);
+
+function pressEnter(e) {
+  if (e.keyCode === 13) {
+    changePictures();
   }
-});
-
-  
+}  
