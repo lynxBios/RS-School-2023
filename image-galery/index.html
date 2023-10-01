@@ -14,7 +14,8 @@
       <h1 class="title"> Unsplash API</h1>
 
       <div class="search_wrapper">
-        <input id="input" type="search" placeholder="Search...">
+        <input class="search__input" id="input" type="search" placeholder="Search..." autocomplete="off">
+        <span class="close_btn">X</span>
         <button class="search__btn" id="search" >Go!</button>
       </div>
       
@@ -24,7 +25,9 @@
   <main>
     <div class="images__wrapper">
       <div class="images">
-        <div class="images__grid"></div>
+        <div class="images__grid">
+          <img class="image" src="" alt="">
+        </div>
       </div>
     </div>
   </main>
