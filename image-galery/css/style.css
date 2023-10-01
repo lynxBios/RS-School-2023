@@ -184,9 +184,7 @@ main {
     width: 7rem;
     height: auto;  
     
-    background-color: white;
-
-    
+    background-color: white;    
 }
 
 .github_logo img {
@@ -194,4 +192,35 @@ main {
     align-items: center;
     background-color: aliceblue;
     border-radius: 50%;    
+}
+
+@media screen and (max-width: 768px) {
+  .images__grid {
+    display: grid;  
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    grid-gap: 2rem;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 685px) {
+  .title {
+    margin-left: 3rem;
+    font-size: 2.5rem;    
+  }
+
+  .images__grid {
+    display: grid;  
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    grid-gap: 2rem;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+  }  
 }
