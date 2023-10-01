@@ -28,6 +28,8 @@ function showImages(data) {
 
 
 
+
+
 buttonGo.addEventListener('click', () => {
   fetchImages();
 });
@@ -40,10 +42,12 @@ function pressEnter(e) {
   }
 }
 
+fetchImages();
+
 window.addEventListener('DOMContentLoaded', (event) => {
-  const inputElement = document.getElementById('srch_word');
-  if(inputElement) {
-      inputElement.focus();
+  const srchWord = document.getElementById('srch_word');
+  if(srchWord) {
+      srchWord.focus();
   }
 });
 
