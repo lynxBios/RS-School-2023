@@ -1,0 +1,116 @@
+@font-face {
+    font-display: swap; 
+    font-family: 'Mooli';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/Mooli-Regular.ttf') format('ttf'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;    
+
+  scroll-behavior: smooth;
+}
+  
+html {
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-size: 62.5%;
+  font-family: 'Mooli', sans-serif;
+  color: rgb(190, 188, 188);
+
+  background-color: #1f2120;
+}
+  
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;  
+  margin: 0 auto;   
+}
+
+.header {
+    display: flex;
+    align-items: center;   
+    width: 100%;
+    max-width: 1920px;
+    height: 7rem;  
+    margin: 0 auto;    
+    padding: 0 3rem;
+
+    font-size: 2em;
+
+    background-color: black;
+    box-shadow: 0 5px 10px rgb(7, 255, 238);
+}
+
+
+
+
+
+.footer_wrapper { 
+    display: flex;   
+    width: 100%;
+    max-width: 1920px;
+    height: 7rem;  
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 0 3rem;
+    
+    background-color: black;
+    box-shadow: 0 5px 10px rgb(7, 255, 238);
+}
+  
+.footer {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.copy_text {
+    color: aliceblue;
+    border-radius: 10%;
+    font-size: 1rem;
+}
+  
+.logo img {
+    width: 7rem;
+    height: auto;  
+      
+    background-color: white;
+    
+    transition: all 0.5s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);    
+    background-color: rgb(7, 255, 238);
+}
+  
+.github_logo img {
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 50%;
+      
+    transition: all 0.5s ease-in-out;
+}
+
+.github_logo img:hover {
+    transform: scale(1.1);
+    background-color: rgb(7, 255, 238);
+}
