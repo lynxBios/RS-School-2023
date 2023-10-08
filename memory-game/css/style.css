@@ -36,8 +36,7 @@ body {
   height: 100%;  
   margin: 0 auto;
   
-  color: rgb(7, 255, 238);
-  font-size: ;
+  color: rgb(7, 255, 238);  
 }
 
 .header {
@@ -46,7 +45,8 @@ body {
   width: 100%;
   max-width: 1920px;
   height: 7rem;  
-  margin: 0 auto;    
+  margin: 0 auto;
+  margin-bottom: 2rem;    
   padding: 0 3rem;
 
   font-size: 2em;           
@@ -54,8 +54,6 @@ body {
   background-color: black;
   box-shadow: 0 5px 10px rgb(7, 255, 238);
 }
-
-
 
 .title h1 {
   color: rgb(7, 255, 238);
@@ -76,33 +74,32 @@ main{
     margin-bottom: 2rem;   
     padding: 0 3rem;
 
-    gap: 1rem;
-}
-
-.grid__container {
-    width: 50rem;    
+    gap: 1rem;    
 }
 
 .grid {
-  display: grid;  
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 2rem;
-  padding: 1rem;
-  margin: 0 auto;
-  width: 100%;
-  height: auto; 
+  display: flex;
+  flex-wrap: wrap;
+  width: 60rem;
+  height: 45rem; 
+  
+  perspective: 1000px;
 }
 
-.grid__item {
+.grid__item {  
     position: relative;
-    padding: 5px;
+
+    width: calc(25% - 1rem);
+    height: calc(33.333% - 1rem);
+    margin: 5px;
 
     border: 1px solid rgb(7, 255, 238);
     border-radius: 5px;
     cursor: pointer;    
 
     transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
 }
 
 .grid__item:active {
@@ -110,10 +107,29 @@ main{
     transition: transform 0.2s;
 }
 
-.front_face {
-    position: absolute;
-    visibility: hidden;    
+.grid__item.flip {
+    transform: rotateY(180deg);
 }
+
+.front_face,
+.back_face {
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;   
+    padding: 15px;
+
+    background-color: #1f2120;
+    border-radius: 5px;
+
+    backface-visibility: hidden;
+}
+
+.front_face {
+    transform: rotateY(180deg);
+}
+
+
 
 .timer__wrapper{
     display: flex;
@@ -156,8 +172,6 @@ main{
     border: 1px solid rgb(214, 7, 255);
     border-radius: 5px;
 }
-
-
 
 .score__wrapper {
     display: flex;
@@ -211,6 +225,7 @@ main{
     transform: scale(1.2);
     color: rgb(12, 13, 13);
 }
+
 
 
 .footer_wrapper { 
