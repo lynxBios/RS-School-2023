@@ -107,8 +107,12 @@ main{
     transition: transform 0.2s;
 }
 
-.grid__item.flip {
+.grid__item.turn {
     transform: rotateY(180deg);
+}
+
+.grid__item.match {
+    visibility: hidden;
 }
 
 .front_face,
@@ -146,10 +150,10 @@ main{
     height: 10rem;     
 }
 
-.time {
+.timer {
     display: flex;
     justify-content: center;
-    width: 7.5rem;
+    width: 8.5rem;
     height: 3.5rem;
 
     border: 1px solid rgb(214, 7, 255);
