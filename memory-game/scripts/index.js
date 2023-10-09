@@ -1,7 +1,6 @@
 'use strict';
 
 const cards = document.querySelectorAll('.grid__item');
-const card = document.getElementById('grd_itm');
 const frontFace = document.querySelector('.front_face');
 const backFace = document.querySelector('.back_face');
 
@@ -51,12 +50,10 @@ function countMoves() {
     showMoves.innerHTML = moves;    
 }
 backFace.addEventListener('click', function () {
-    countMoves();
-    console.log(moves);
+    countMoves();    
 });
 frontFace.addEventListener('click', function () {
-    countMoves();
-    console.log(moves);
+    countMoves();    
 });
 
 
@@ -66,14 +63,12 @@ function turnCard() {
 
     if (!activeCard) {
         activeCard = true;
-        cardOne = this;
-        return;
-    }
-
-    cardTwo = this;
-    activeCard = false;
-
-    compareCards();
+        cardOne = this;        
+    } else {
+        activeCard = false;
+        cardTwo = this;
+        compareCards();
+    }    
 }
 
 function compareCards() {
@@ -81,11 +76,19 @@ function compareCards() {
     const cardTwoImg = cardTwo.querySelector('.front_face').src;
 
     if (cardOneImg === cardTwoImg) {
-        cards.forEach(card => {
-            if (card === cardOne || card === cardTwo) {
-                card.classList.add('match');
-            }
-        });
+        cardOne.removeEventListener('click', turnCard);        
+        cardTwo.removeEventListener('click', turnCard);        
+
+        setTimeout(function () {
+            cardOne.classList.add('match')
+            cardTwo.classList.add('match')
+        }, 700);
+        
+    } else {
+        setTimeout(function () {
+            cardOne.classList.remove('turn');
+            cardTwo.classList.remove('turn');            
+        }, 1000);
     }
 }
 

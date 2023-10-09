@@ -133,8 +133,6 @@ main{
     transform: rotateY(180deg);
 }
 
-
-
 .timer__wrapper{
     display: flex;
     flex-direction: column;
