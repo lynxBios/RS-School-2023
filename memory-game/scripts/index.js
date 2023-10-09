@@ -1,6 +1,10 @@
 'use strict';
 
 const cards = document.querySelectorAll('.grid__item');
+const card = document.getElementById('grd_itm');
+const frontFace = document.querySelector('.front_face');
+const backFace = document.querySelector('.back_face');
+
 
 let activeCard = false;
 let cardOne;
@@ -9,7 +13,8 @@ let showTimer = document.getElementById('tmr');
 let startBtn = document.getElementById('search');
 let minutesNumber = 1 * 60;
 let timer;
-
+let moves = 0;
+let showMoves = document.getElementById('mvs');
 
 
 (function mixCards() {
@@ -18,7 +23,6 @@ let timer;
         card.style.order = randomPos;
     });
 })();
-
 
 function startTimer() {
     timer = setInterval(function () {
@@ -35,20 +39,25 @@ function startTimer() {
         --minutesNumber;
     }, 1000);
 }
-
 startBtn.addEventListener('click', function () {
     startTimer();
 });
 
+cards.forEach(card => card.addEventListener('click', turnCard));
+
+
 function countMoves() {
-    let moves = document.getElementById('moves');
-    moves.innerHTML = 0;
+    moves += 1;
+    showMoves.innerHTML = moves;    
 }
-
-cards.addEventListener('click', function () {
+backFace.addEventListener('click', function () {
     countMoves();
-})
-
+    console.log(moves);
+});
+frontFace.addEventListener('click', function () {
+    countMoves();
+    console.log(moves);
+});
 
 
 
@@ -80,4 +89,4 @@ function compareCards() {
     }
 }
 
-cards.forEach(card => card.addEventListener('click', turnCard));
+
