@@ -1,29 +1,36 @@
 'use strict';
 
 const cards = document.querySelectorAll('.grid__item');
+
 const frontFace = document.querySelector('.front_face');
 const backFace = document.querySelector('.back_face');
-
+const startBtn = document.getElementById('search');
+const resetBtn = document.getElementById('play_again');
 
 let activeCard = false;
 let cardOne;
 let cardTwo;
 let showTimer = document.getElementById('tmr');
-let startBtn = document.getElementById('search');
 let minutesNumber = 1 * 60;
 let timer;
 let moves = 0;
 let showMoves = document.getElementById('mvs');
+let blockField = true;
 
 
-(function mixCards() {
+function mixCards() {
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 12);
         card.style.order = randomPos;
     });
-})();
+};
+
+function unblockField() {
+    blockField = false;
+}
 
 function startTimer() {
+    blockField = false;
     timer = setInterval(function () {
         let seconds = minutesNumber % 60;
         let minutes = Math.floor(minutesNumber / 60);
@@ -39,13 +46,23 @@ function startTimer() {
     }, 1000);
 }
 startBtn.addEventListener('click', function () {
-    startTimer();
+    mixCards();
+    startTimer();    
 });
+
+function stopTimer() {
+    clearInterval(timer);
+    minutesNumber = 1 * 60;
+    showTimer.innerHTML = '1:00';    
+}   
 
 cards.forEach(card => card.addEventListener('click', turnCard));
 
 
 function countMoves() {
+    if (blockField === true) {
+        return;
+    }
     moves += 1;
     showMoves.innerHTML = moves;    
 }
@@ -57,8 +74,15 @@ frontFace.addEventListener('click', function () {
 });
 
 
-
 function turnCard() {
+    if (blockField === true) {
+        return;
+    }
+
+    if (this === cardOne) {
+        return;
+    }
+
     this.classList.add('turn');
 
     if (!activeCard) {
@@ -85,11 +109,52 @@ function compareCards() {
         }, 700);
         
     } else {
+        blockField = true;
         setTimeout(function () {
             cardOne.classList.remove('turn');
-            cardTwo.classList.remove('turn');            
+            cardTwo.classList.remove('turn');
+            blockField = false;            
         }, 1000);
     }
 }
 
+function resetVariables() {
+    activeCard = false;
+    blockField = true;    
+    cardOne = null;
+    cardTwo = null;
+  }
 
+function resetMoves() {
+    moves = 0;
+    showMoves.innerHTML = moves;
+}
+
+function resetGame() {        
+    resetField();    
+    resetMoves();
+    stopTimer();    
+    mixCards();
+    resetVariables();            
+}
+resetBtn.addEventListener('click', resetGame);
+
+
+
+function resetField() {
+    const turnedCard = document.querySelectorAll('.turn');
+    const matchedCard = document.querySelectorAll('.match');
+    if (turnedCard) {
+        turnedCard.forEach(card => card.classList.remove('turn'));
+    }   
+    if (matchedCard) {
+        matchedCard.forEach(card => card.classList.remove('match'));
+    }    
+}
+
+(function youWin() {
+    if (matchedCard.forEach(card => card.classList.contains('match'))) {
+        stopTimer();
+        alert('YOU WIN');    
+    }
+})();
