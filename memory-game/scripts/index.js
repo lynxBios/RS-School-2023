@@ -25,10 +25,6 @@ function mixCards() {
     });
 };
 
-function unblockField() {
-    blockField = false;
-}
-
 function startTimer() {
     blockField = false;
     timer = setInterval(function () {
@@ -130,12 +126,13 @@ function resetMoves() {
     showMoves.innerHTML = moves;
 }
 
-function resetGame() {        
-    resetField();    
-    resetMoves();
-    stopTimer();    
-    mixCards();
-    resetVariables();            
+function resetGame() {
+    document.location.reload()        
+    //resetField();    
+    //resetMoves();
+    //stopTimer();    
+    //mixCards();
+    //resetVariables();            
 }
 resetBtn.addEventListener('click', resetGame);
 
