@@ -1,7 +1,6 @@
 'use strict';
 
 const cards = document.querySelectorAll('.grid__item');
-
 const frontFace = document.querySelector('.front_face');
 const backFace = document.querySelector('.back_face');
 const startBtn = document.getElementById('search');
@@ -47,10 +46,13 @@ startBtn.addEventListener('click', function () {
 });
 
 function stopTimer() {
-    clearInterval(timer);
+    clearInterval(timer);        
+}
+
+function resetTimer() {
     minutesNumber = 1 * 60;
-    showTimer.innerHTML = '1:00';    
-}   
+    showTimer.innerHTML = '1:00';
+}
 
 cards.forEach(card => card.addEventListener('click', turnCard));
 
@@ -69,7 +71,6 @@ frontFace.addEventListener('click', function () {
     countMoves();    
 });
 
-
 function turnCard() {
     if (blockField === true) {
         return;
@@ -77,7 +78,7 @@ function turnCard() {
 
     if (this === cardOne) {
         return;
-    }
+    }    
 
     this.classList.add('turn');
 
@@ -87,7 +88,7 @@ function turnCard() {
     } else {
         activeCard = false;
         cardTwo = this;
-        compareCards();
+        compareCards();        
     }    
 }
 
@@ -102,17 +103,26 @@ function compareCards() {
         setTimeout(function () {
             cardOne.classList.add('match')
             cardTwo.classList.add('match')
-        }, 700);
-        
-    } else {
+            youWin();
+        }, 700);        
+    } else {       
         blockField = true;
         setTimeout(function () {
             cardOne.classList.remove('turn');
             cardTwo.classList.remove('turn');
             blockField = false;            
         }, 1000);
-    }
+    }    
 }
+
+const youWin = () => {
+    if (document.querySelectorAll('.match').length === 12) {
+        stopTimer();
+        setTimeout(function () {
+            alert('YOU WIN!');
+        }, 300)            
+    }
+  };
 
 function resetVariables() {
     activeCard = false;
@@ -149,9 +159,7 @@ function resetField() {
     }    
 }
 
-(function youWin() {
-    if (matchedCard.forEach(card => card.classList.contains('match'))) {
-        stopTimer();
-        alert('YOU WIN');    
-    }
-})();
+
+
+
+
