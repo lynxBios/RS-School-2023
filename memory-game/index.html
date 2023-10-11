@@ -101,9 +101,9 @@
                     
                     <div class="score_item__wrapper">
                         <div class="score_titles box_place" id="sc_ttls">1</div>
-                        <div class="players_name box_name"></div>
-                        <div class="players_score box_score"></div>
-                        <div class="players_time box_time"></div>
+                        <div class="players_name box_name" id="sc_nm"></div>
+                        <div class="players_score box_score" id="sc_mvs"></div>
+                        <div class="players_time box_time" id="sc_tm"></div>
                     </div>
                     <div class="score_item__wrapper">
                         <div class="score_titles box_place" id="sc_ttls">2</div>
@@ -165,14 +165,14 @@
 
        <div class="buttons_wrapper">
         <form action="#" class="form__wrapper" method="get">
-            <label for="" class="label">Enter your name
-                <input class="input" type="text" id="name"  minlength="3" maxlength="10" autofocus name="name">
-                <button class="submit__btn"  id="search">Go!</button>
+            <label for="name" class="label">Enter your name
+                <input class="input" type="text" id="name"  minlength="3" maxlength="10" autofocus name="name" required>
+                <button class="submit__btn" type="submit" id="go_button">Go!</button>
             </label>
         </form>
 
         <div class="play_again">
-            <button class="play_again__btn" type="reset" id="play_again">PLAY AGAIN</button>
+            <button class="play_again__btn" id="play_again">PLAY AGAIN</button>
         </div>
        </div>
           
