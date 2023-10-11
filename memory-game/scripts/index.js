@@ -3,8 +3,9 @@
 const cards = document.querySelectorAll('.grid__item');
 const frontFace = document.querySelector('.front_face');
 const backFace = document.querySelector('.back_face');
-const startBtn = document.getElementById('search');
+const startBtn = document.getElementById('go_button');
 const resetBtn = document.getElementById('play_again');
+const form = document.querySelector('.form__wrapper');
 
 let activeCard = false;
 let cardOne;
@@ -15,7 +16,23 @@ let timer;
 let moves = 0;
 let showMoves = document.getElementById('mvs');
 let blockField = true;
+let user = {
+    score: 0,
+    name: '',
+    moves: 0,
+    time: ''
+}
 
+let showNameScore = document.getElementById('sc_nm');
+let showMovesNum = document.getElementById('sc_mvs');
+let showTimeResult = document.getElementById('sc_tm');
+
+
+//обработка данных с формы
+function getUserName() {
+    let name = document.getElementById('name').value;
+    localStorage.setItem('name', name);
+}
 
 function mixCards() {
     cards.forEach(card => {
@@ -40,9 +57,21 @@ function startTimer() {
         --minutesNumber;
     }, 1000);
 }
-startBtn.addEventListener('click', function () {
+
+
+form.addEventListener('submit', function (startBtn) {
+    startBtn.preventDefault();    
+})
+
+
+
+startBtn.addEventListener('click', function () {    
     mixCards();
-    startTimer();    
+    startTimer();
+    getUserName();
+    console.log(user);
+    console.log(user.name);
+    console.log(name)    
 });
 
 function stopTimer() {
@@ -119,8 +148,14 @@ function compareCards() {
 const youWin = () => {
     if (document.querySelectorAll('.match').length === 12) {
         stopTimer();
+        user.moves = moves;
+        user.name = name;            
+        user.time = showTimer.innerHTML;
+        recordGameResults()
+        showGameResults();        
+
         setTimeout(function () {
-            alert('YOU WIN!');
+            alert('YOU WIN!');            
         }, 300)            
     }
   };
@@ -158,7 +193,32 @@ function resetField() {
     }    
 }
 
+function recordGameResults() {
+       
+    localStorage.setItem('score', user.score);
+    localStorage.setItem('moves', user.moves);
+    localStorage.setItem('time', user.time);
+    console.log(user)
+    console.log(user.name)
+}
+
+function showGameResults() {
+    let name = localStorage.getItem('name');
+    let score = localStorage.getItem('score');
+    let moves = localStorage.getItem('moves');
+    let time = localStorage.getItem('time');
+
+    showNameScore.innerHTML = name;
+    showMovesNum.innerHTML = moves;
+    showTimeResult.innerHTML = time;
+}
 
 
 
+function compareScores() {
+    if (user.score > localStorage.getItem('score')) {
+        localStorage.setItem('score', user.score);
+        getUserName();
+    }
+}
 
