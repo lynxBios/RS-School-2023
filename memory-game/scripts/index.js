@@ -98,11 +98,12 @@ function compareCards() {
 
     if (cardOneImg === cardTwoImg) {
         cardOne.removeEventListener('click', turnCard);        
-        cardTwo.removeEventListener('click', turnCard);        
-
+        cardTwo.removeEventListener('click', turnCard);
+        
         setTimeout(function () {
             cardOne.classList.add('match')
             cardTwo.classList.add('match')
+            
             youWin();
         }, 700);        
     } else {       
@@ -145,8 +146,6 @@ function resetGame() {
     //resetVariables();            
 }
 resetBtn.addEventListener('click', resetGame);
-
-
 
 function resetField() {
     const turnedCard = document.querySelectorAll('.turn');
