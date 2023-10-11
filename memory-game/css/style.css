@@ -80,8 +80,8 @@ main{
 .grid {
   display: flex;
   flex-wrap: wrap;
-  width: 60rem;
-  height: 45rem; 
+  width: 50rem;
+  height: 40rem; 
   
   perspective: 1000px;
 }
@@ -99,7 +99,7 @@ main{
 
     transform: scale(1);
     transform-style: preserve-3d;
-    transition: transform .5s;
+    transition: transform .5s;  
 }
 
 .grid__item:active {
@@ -114,6 +114,8 @@ main{
 .grid__item.match {
     visibility: hidden;
 }
+
+
 
 .front_face,
 .back_face {
@@ -178,9 +180,9 @@ main{
 .score__wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 30rem;
-    padding: 2rem;
+    
+    width: 50rem;
+    padding: 1rem 2rem;
 
     border: 1px solid rgb(214, 7, 255);
     border-radius: 5px;
@@ -188,6 +190,69 @@ main{
 
 .score {
     align-self: center;
+    margin-bottom: 1rem;    
+}
+
+.score__grid {
+    font-size: 1.5rem;
+}
+
+.score_item__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;       
+}
+
+.score_titles{
+    
+}
+
+.box_place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 2.5rem;
+    margin-right: 0.5rem;
+
+    border: 1px solid rgb(7, 152, 255);
+    border-radius: 5px;
+}
+
+.box_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13rem;
+    height: 2.5rem;
+    margin-right: 0.5rem;
+
+    border: 1px solid rgb(7, 152, 255);
+    border-radius: 5px;
+}
+
+.box_score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 2.5rem;
+    margin-right: 0.5rem;
+
+    border: 1px solid rgb(7, 152, 255);
+    border-radius: 5px;
+}
+
+.box_time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 2.5rem;
+
+    border: 1px solid rgb(7, 152, 255);
+    border-radius: 5px;
 }
 
 .form__wrapper {
@@ -210,6 +275,7 @@ main{
     display: inline-block;
     width: 4.5rem;
     height: 4rem;
+    ;
   
     font-size: 1.5rem;
     font-weight: 600;
@@ -229,24 +295,19 @@ main{
 }
 
 .buttons_wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: flex;   
     align-items: center;
     width: 100%;
     max-width: 1920px;
     height: auto;  
-    margin: 0 auto; 
-}
-
-.play_again {
-    margin-right: 27rem;    
+    margin: 0 auto;     
 }
 
 .play_again__btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+        
     width: 15rem;
     height: 5rem;
     padding-right: 1rem;
