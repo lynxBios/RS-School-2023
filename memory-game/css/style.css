@@ -80,7 +80,7 @@ main{
 .grid {
   display: flex;
   flex-wrap: wrap;
-  width: 50rem;
+  width: 45rem;
   height: 40rem; 
   
   perspective: 1000px;
@@ -153,8 +153,9 @@ main{
 .timer {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 8.5rem;
-    height: 3.5rem;
+    height: 4.1rem;
 
     border: 1px solid rgb(214, 7, 255);
     border-radius: 5px;
@@ -171,8 +172,9 @@ main{
 .number_of_moves {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 6rem;
-    height: 3.5rem;
+    height: 4.1rem;
     border: 1px solid rgb(214, 7, 255);
     border-radius: 5px;
 }
@@ -190,7 +192,9 @@ main{
 
 .score {
     align-self: center;
-    margin-bottom: 1rem;    
+    margin-bottom: 2rem;
+    
+    font-size: 2rem;
 }
 
 .score__grid {
@@ -204,9 +208,6 @@ main{
     margin-bottom: 1rem;       
 }
 
-.score_titles{
-    
-}
 
 .box_place {
     display: flex;
