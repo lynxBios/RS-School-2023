@@ -6,8 +6,7 @@ const backFace = document.querySelector('.back_face');
 const startBtn = document.getElementById('go_button');
 const resetBtn = document.getElementById('play_again');
 const form = document.querySelector('.form__wrapper');
-const data = JSON.parse(localStorage.getItem('playerList'));
-const playerList = [];
+const scoreGrid = document.querySelector('.score__grid');
 
 let activeCard = false;
 let cardOne;
@@ -24,10 +23,8 @@ let user = {
     moves: 0,
     time: ''
 }
-let showNameScore = document.getElementById('sc_nm');
-let showMovesNum = document.getElementById('sc_mvs');
-let showTimeResult = document.getElementById('sc_tm');
-let showGameNumber = document.getElementById('sc_ttls');
+
+
 
 function mixCards() {
     cards.forEach(card => {
@@ -60,10 +57,11 @@ form.addEventListener('submit', function (startBtn) {
     startBtn.preventDefault();    
 })
 
-startBtn.addEventListener('click', function () {    
+startBtn.addEventListener('click', function () {
+    startBtn.classList.add('started');    
     mixCards();
     startTimer();
-    gameCounter();                
+    gameCounter();
 });
 
 
@@ -71,7 +69,7 @@ function stopTimer() {
     clearInterval(timer);        
 }
 
-function resetTimer() {
+function resetTimer() {    
     minutesNumber = 1 * 60;
     showTimer.innerHTML = '1:00';
 }
@@ -138,9 +136,9 @@ function compareCards() {
     }    
 }
 
-function resetVariables() {
+function resetVariables() {    
     activeCard = false;
-    blockField = true;    
+    blockField = true;        
     cardOne = null;
     cardTwo = null;
   }
@@ -151,12 +149,15 @@ function resetMoves() {
 }
 
 function resetGame() {
-    document.location.reload()        
-    //resetField();    
-    //resetMoves();
-    //stopTimer();    
-    //mixCards();
-    //resetVariables();            
+    //document.location.reload();           
+    resetField();       
+    resetMoves();
+    resetTimer();    
+    mixCards();
+    resetVariables();
+    startBtn.classList.remove('started');
+    
+    cards.forEach(card => card.addEventListener('click', turnCard));                
 }
 resetBtn.addEventListener('click', resetGame);
 
@@ -183,14 +184,14 @@ const youWin = () => {
             alert('YOU WIN!');            
         }, 300)                   
     }
-  };
+};
 
 function Player(name, time, moves, gameNumber) {
     this.name = name;
     this.time = time;
     this.moves = moves;
     this.gameNumber = gameNumber;    
-  }
+}
 
 function recordGameResults() {
     let name = form.name.value;
@@ -204,18 +205,90 @@ function recordGameResults() {
     if (keys.length > 10) {        
         keys.sort((a, b) => parseInt(a) - parseInt(b));        
         localStorage.removeItem(keys[0]);
+        setTimeout(function () {
+            document.location.reload();
+        }, 900);        
+    }
+
+    let data = {};
+    keys.forEach(key => {
+        data[key] = JSON.parse(localStorage.getItem(key));
+        
+    });    
+}
+
+function showGameResults() {        
+    buildScoreTable();
+}
+
+function buildScoreTable() {
+    const data = {};
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        const value = JSON.parse(localStorage.getItem(key));
+        data[key] = value;
+    }
+
+    if (data !== "" && data !== null) {
+        createScoreItem();        
+    } else {
+        fetchData();
+    }       
+}
+
+function fetchData() {
+    const data = {};
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        const value = JSON.parse(localStorage.getItem(key));
+        data[key] = value;
+    }
+
+    if (Object.keys(data).length > 0) {
+        
+        for (const key in data) {
+            const gameData = data[key];
+            
+            createScoreItem(gameData);
+        }
+    } else {
+        
+
+        createScoreItem()
     }
 }
 
-function showGameResults() {
-    let name = form.name.value;
-    let time = user.time;
+function createScoreItem() {    
+    const scoreItemWrapper = document.createElement('div');
+    scoreItemWrapper.classList.add('score_item__wrapper');
+    scoreGrid.appendChild(scoreItemWrapper);
 
-    showGameNumber.innerHTML = user.gameNumber;
-    showNameScore.innerHTML = name;
-    showMovesNum.innerHTML = moves;
-    showTimeResult.innerHTML = time; 
+    const boxPlace = document.createElement('div');
+    boxPlace.classList.add('box_place');
+    boxPlace.id = 'sc_ttls';
+    boxPlace.innerHTML = user.gameNumber;
+    scoreItemWrapper.appendChild(boxPlace);
+
+    const boxName = document.createElement('div');
+    boxName.classList.add('box_name');
+    boxName.id = 'sc_nm';
+    boxName.innerHTML = form.name.value;
+    scoreItemWrapper.appendChild(boxName);
+
+    const boxScore = document.createElement('div');
+    boxScore.classList.add('box_score');
+    boxScore.id = 'sc_mvs';
+    boxScore.innerHTML = user.moves;
+    scoreItemWrapper.appendChild(boxScore);
+
+    const boxTime = document.createElement('div');
+    boxTime.classList.add('box_time');
+    boxTime.id = 'sc_tm';
+    boxTime.innerHTML = user.time;
+    scoreItemWrapper.appendChild(boxTime);
 }
+
+
 
 function gameCounter() {
     let counterOfGames = localStorage.getItem('counterOfGames');

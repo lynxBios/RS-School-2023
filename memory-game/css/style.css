@@ -191,6 +191,7 @@ main{
 }
 
 .score {
+    width: 23.8rem;
     align-self: center;
     margin-bottom: 2rem;
     
@@ -288,6 +289,10 @@ main{
   
     cursor: pointer;
     transition: 0.5s;
+}
+
+.submit__btn.started {
+    visibility: hidden;
 }
   
 .submit__btn:hover {
