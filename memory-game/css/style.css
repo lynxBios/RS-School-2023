@@ -111,12 +111,6 @@ main{
     transform: rotateY(180deg);
 }
 
-.grid__item.match {
-    visibility: hidden;
-}
-
-
-
 .front_face,
 .back_face {
     position: absolute;
@@ -161,6 +155,11 @@ main{
     border-radius: 5px;
 }
 
+.time {
+    display: flex;
+    justify-content: center;
+}
+
 .moves__wrapper {
     display: flex;
     flex-direction: column;
@@ -182,15 +181,17 @@ main{
 .score__wrapper {
     display: flex;
     flex-direction: column;
+    /*justify-content: center;*/
     
     width: 50rem;
+    height: 42rem;
     padding: 1rem 2rem;
 
     border: 1px solid rgb(214, 7, 255);
     border-radius: 5px;
 }
 
-.score {
+.score {    
     width: 23.8rem;
     align-self: center;
     margin-bottom: 2rem;
@@ -265,9 +266,9 @@ main{
 
 .input {
     width: 100%;
-    max-width: 25rem;
+    max-width: 30rem;
     height: 3.5rem;
-    margin-right: 1rem;
+    margin-right: 2rem;
     padding-left: 1rem;
     border: 3px solid rgb(7, 255, 238);
     border-radius: 5px;
@@ -275,12 +276,11 @@ main{
 
 .submit__btn  {
     display: inline-block;
-    width: 4.5rem;
-    height: 4rem;
-    ;
+    width: 5.5rem;
+    height: 4.7rem;   
   
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 800;
   
     border-radius: 50%;
     
@@ -291,7 +291,7 @@ main{
     transition: 0.5s;
 }
 
-.submit__btn.started {
+.submit__btn.started {    
     visibility: hidden;
 }
   
@@ -300,13 +300,10 @@ main{
     color: rgb(12, 13, 13);
 }
 
-.buttons_wrapper {
-    display: flex;   
-    align-items: center;
-    width: 100%;
+.buttons_wrapper {    
+    width: 45rem;
     max-width: 1920px;
-    height: auto;  
-    margin: 0 auto;     
+    height: auto;          
 }
 
 .play_again__btn {
@@ -332,8 +329,6 @@ main{
 .play_again__btn:hover {
     transform: scale(1.2);
 }
-
-
 
 .footer_wrapper { 
     display: flex;   
@@ -393,4 +388,156 @@ main{
 .github_logo img:hover {
     transform: scale(1.1);
     background-color: rgb(7, 255, 238);
+}
+
+@media screen and (max-width: 1024px) {
+    .header {               
+        font-size: 1rem;
+      }
+
+    .header__wrapper {
+        display: flex;
+        align-items: center;
+        height: 4rem;
+    }
+      
+      main{
+          font-size: 2rem;
+      }
+
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        width: 45rem;
+        height: 35rem;
+    }
+
+    .timer__wrapper{        
+        height: 35rem;               
+    }
+    
+    .time__wrapper {        
+        height: 8rem;     
+    }
+    
+    .timer {        
+        width: 6rem;
+        height: 3.5rem;    
+    }    
+    
+    .moves__wrapper {        
+        height: 8rem;    
+    }
+    
+    .number_of_moves {
+        width: 6rem;
+        height: 3.5rem;
+    }
+
+    .score__wrapper {        
+        height: 35rem;       
+    }   
+    
+    .score__grid {
+        font-size: 1.2rem;
+    }    
+    
+    .box_place {        
+        height: 1.9rem;        
+        border-radius: 3px;
+    }
+    
+    .box_name {        
+        height: 1.9rem;       
+        border-radius: 3px;
+    }
+    
+    .box_score {        
+        height: 1.9rem;       
+        border-radius: 3px;
+    }
+    
+    .box_time {        
+        height: 1.9rem;    
+        border-radius: 3px;
+    }
+}
+
+@media screen and (max-width: 997px) {
+    .header {               
+        font-size: 1rem;
+      }
+
+    .header__wrapper {
+        display: flex;
+        align-items: center;
+        height: 4rem;
+    } 
+    
+    .content__wrapper {
+        display: flex;
+        align-items: center;        
+        max-width: 767px;
+        width: 100%;
+        height: 38rem;
+        margin: 0 auto;       
+    }
+
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        width: 32rem;
+        height: 17em;
+        margin-right: 1rem;
+    }
+
+    .front_face,
+    .back_face {      
+        padding: 9px;
+    }
+
+    .timer__wrapper{
+        width: 10rem;        
+        height: 32rem;
+        margin-right: 1rem;
+        padding-right: 0px;
+        padding-left: 0px;               
+    }   
+    
+    .timer {        
+        height: 3rem;    
+    }
+    
+    .play_again__btn {           
+        width: 10rem;
+        height: 4rem;        
+    
+        font-size: 1.1rem;        
+        
+        border-radius: 8px;       
+    }    
+    
+    .number_of_moves {        
+        height: 3rem;
+    }
+
+    .score__wrapper {
+        display: flex;
+        
+        width: 25rem;        
+        height: 34rem;       
+    } 
+    
+    .score {
+        display: flex;    
+        justify-content: center;
+        margin-bottom: 1rem;
+        
+        font-size: 1.7rem;
+    }   
+    
+    .footer_wrapper {
+        height: 6rem;
+        margin-top: 1rem;
+    }
 }
