@@ -61,16 +61,18 @@ body {
 }
 
 main{
-    font-size: 3rem;
+    margin: 0 auto;
+    font-size: 3rem;    
 }
 
 .content__wrapper {
     display: inline-flex;
     justify-content: space-between;
-    width: 90%;
+
+    width: 130rem;
     max-width: 1920px;
     height: auto;  
-    margin: 0 auto; 
+        
     margin-bottom: 2rem;   
     padding: 0 3rem;
 
@@ -200,7 +202,7 @@ main{
 }
 
 .score__grid {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 .score_item__wrapper {
@@ -215,7 +217,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
+    width: 3.5rem;
     height: 2.5rem;
     margin-right: 0.5rem;
 
@@ -227,7 +229,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 13rem;
+    width: 25rem;
     height: 2.5rem;
     margin-right: 0.5rem;
 
@@ -239,7 +241,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
+    width: 4rem;
     height: 2.5rem;
     margin-right: 0.5rem;
 
@@ -251,7 +253,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
+    width: 5.5rem;
     height: 2.5rem;
 
     border: 1px solid rgb(7, 152, 255);
@@ -389,6 +391,95 @@ main{
     transform: scale(1.1);
     background-color: rgb(7, 255, 238);
 }
+
+@media screen and (max-width: 1440px) {
+    .content__wrapper {        
+        width: 100%;
+        max-width: 1440px;        
+        margin: 0 auto;          
+      }
+
+    }
+
+@media screen and (max-width: 1220px) {
+    .header {               
+        font-size: 1rem;
+      }
+
+    .header__wrapper {
+        display: flex;
+        align-items: center;
+        height: 4rem;
+    }
+
+    .content__wrapper {        
+        width: 100rem;
+        max-width: 1220px;        
+        margin: 0 auto;
+        
+        font-size: 2rem;
+      }
+
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        width: 40rem;
+        height: 35rem;
+    }
+
+    .timer__wrapper{        
+        height: 35rem;               
+    }
+    
+   
+    
+    .timer {        
+        width: 6rem;
+        height: 3rem;    
+    }    
+    
+    .moves__wrapper {        
+        height: 8rem;    
+    }
+    
+    .number_of_moves {
+        width: 5rem;
+        height: 3rem;
+    }
+
+    .score__wrapper {        
+        height: 35rem;       
+    }   
+    
+    .score__grid {
+        font-size: 1.2rem;
+    }    
+    
+    .box_place {
+        width: 2.3rem;        
+        height: 1.9rem;        
+        border-radius: 3px;
+    }
+    
+    .box_name { 
+        width: 15rem;       
+        height: 1.9rem;       
+        border-radius: 3px;
+    }
+    
+    .box_score {
+        width: 3rem;        
+        height: 1.9rem;       
+        border-radius: 3px;
+    }
+    
+    .box_time {
+        width: 3.5rem;        
+        height: 1.9rem;    
+        border-radius: 3px;
+    }    
+}
+
 
 @media screen and (max-width: 1024px) {
     .header {               
