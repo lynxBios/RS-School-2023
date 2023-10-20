@@ -23,6 +23,7 @@ let user = {
     moves: 0,
     time: ''
 }
+let timerRunning = false;
 
 function fetchDataLocalStorage() {
     const data = [];
@@ -45,7 +46,14 @@ function mixCards() {
 };
 
 function startTimer() {
+    if (timerRunning === true) {
+        return;
+    }
+    
     blockField = false;
+    timerRunning = true;
+    gameCounter();
+
     timer = setInterval(function () {
         let seconds = minutesNumber % 60;
         let minutes = Math.floor(minutesNumber / 60);
@@ -56,9 +64,10 @@ function startTimer() {
             user.name = form.name.value;
             user.moves = moves;
             user.time = showTimer.innerHTML;
-            //resetTimer();
+            
             recordGameResults();
             createScoreItem(user);
+            resetGame();
 
         } else {
             let time = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
@@ -69,23 +78,23 @@ function startTimer() {
 }
 
 form.addEventListener('submit', function (startBtn) {
-    startBtn.preventDefault();        
+    startBtn.preventDefault();
 })
 
-startBtn.addEventListener('click', function () {    
+startBtn.addEventListener('click', function () {      
     startBtn.classList.add('started');    
     mixCards();
-    startTimer();
-    gameCounter();
+    startTimer();     
 });
 
 function stopTimer() {
-    clearInterval(timer);        
+    clearInterval(timer);
+    timerRunning = false;            
 }
 
 function resetTimer() {    
     minutesNumber = 1 * 60;
-    showTimer.innerHTML = '1:00';
+    showTimer.innerHTML = '1:00';    
 }
 
 cards.forEach(card => card.addEventListener('click', turnCard));
@@ -146,7 +155,8 @@ function compareCards() {
     }    
 }
 
-function resetVariables() {    
+function resetVariables() {
+    timerRunning = false;    
     activeCard = false;
     blockField = true;        
     cardOne = null;
@@ -172,9 +182,9 @@ function resetGame() {
 }
 resetBtn.addEventListener('click', resetGame);
 
-function checkGameCounter() {    
-    let counterOfGames = user.gameNumber;
-    
+function checkGameCounter() {
+    let counterOfGames = user.gameNumber;   
+
     if (counterOfGames >= 10) {        
         resetGameCounter();
     }
@@ -227,7 +237,7 @@ function Player(name, time, moves, gameNumber) {
     this.gameNumber = gameNumber;    
 }
 
-function gameCounter() {
+function gameCounter() {    
     let counterOfGames = localStorage.getItem('counterOfGames');
     if (counterOfGames) {
         counterOfGames = parseInt(counterOfGames) + 1;
@@ -235,7 +245,7 @@ function gameCounter() {
         counterOfGames = 1;
     }
     localStorage.setItem('counterOfGames', counterOfGames);
-    user.gameNumber = counterOfGames;
+    user.gameNumber = counterOfGames;    
 }
 
 function recordGameResults() {
