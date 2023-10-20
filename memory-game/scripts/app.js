@@ -170,6 +170,7 @@ function resetMoves() {
 
 function resetGame() {
     startBtn.classList.remove('started');
+    stopTimer();
     checkGameCounter();
     resetField();       
     resetMoves();
